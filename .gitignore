@@ -1,0 +1,8 @@
+# Файл переменных окружения
+.env
+
+# phpstorm project files
+.idea
+
+# composer vendor dir
+/vendor
