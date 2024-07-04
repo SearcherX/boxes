@@ -6,11 +6,15 @@ services:
       context: ./docker/php
       dockerfile: Dockerfile
     container_name: boxes-php-fpm
-    environment:
-      XDEBUG_MODE: ${XDEBUG_MODE:-off}
-      XDEBUG_CONFIG: "client_host=host.docker.internal"
+    user: "${USER_ID:-1000}:${GROUP_ID:-1000}"
     volumes:
       - ./:/var/www/html
+    working_dir: /var/www/html
+    environment:
+      PHP_IDE_CONFIG: ${PHP_IDE_CONFIG:-serverName=docker}
+      XDEBUG_MODE: ${XDEBUG_MODE:-off}
+      XDEBUG_CONFIG: "client_host=host.docker.internal"
+      XDEBUG_TRIGGER: ${XDEBUG_TRIGGER:-yes}
 
   nginx:
     build:
@@ -25,5 +29,22 @@ services:
       PHP_UPSTREAM_PORT: 9000
     depends_on:
       - php-fpm
+      - db
     volumes:
       - ./web:/var/www/html/web
+
+  db:
+    image: mysql
+    container_name: boxes-db
+    environment:
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - ${DB_PORT}:3306
+    volumes:
+      - mysql:/var/lib/mysql
+
+volumes:
+  mysql:
