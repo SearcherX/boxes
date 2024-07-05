@@ -3,8 +3,8 @@ services:
 
   php-fpm:
     build:
-      context: ./docker/php
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: /docker/php/Dockerfile
     container_name: boxes-php-fpm
     user: "${USER_ID:-1000}:${GROUP_ID:-1000}"
     volumes:
