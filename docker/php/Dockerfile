@@ -17,11 +17,12 @@ RUN apk add --no-cache linux-headers \
 	&& pecl clear-cache \
 	&& apk del .build-dependencies
 
-RUN composer install --no-cache
-
 WORKDIR /var/www/html
 
 USER ${USER}
+
+COPY ./composer.json ./composer.json
+RUN composer install --no-cache
 
 CMD php-fpm
 EXPOSE 9000
