@@ -1,6 +1,8 @@
 # Файл переменных окружения
 #.env
 
+composer.lock
+
 # phpstorm project files
 .idea
 
