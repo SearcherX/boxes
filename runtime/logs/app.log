@@ -1,0 +1,956 @@
+2024-07-05 08:32:41 [172.23.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "web". in /var/www/html/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('web', Array)
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Страница не найдена. in /var/www/html/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2024-07-05 08:32:40 [172.23.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'e78f3a38e540434b695f53f3d6b6ab60'
+    '_csrf' => '3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og\";}'
+    'XDEBUG_SESSION' => 'docker'
+]
+
+$_SERVER = [
+    'HOSTNAME' => 'a9bcc8ae7371'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/'
+    'XDEBUG_CONFIG' => 'client_host=host.docker.internal'
+    'PHP_IDE_CONFIG' => 'serverName=docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.2.13'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz'
+    'XDEBUG_MODE' => 'off'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'XDEBUG_TRIGGER' => 'yes'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b'
+    'HTTP_COOKIE' => 'PHPSESSID=e78f3a38e540434b695f53f3d6b6ab60; _csrf=3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og%22%3B%7D; XDEBUG_SESSION=docker'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8012'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'default_server'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.23.0.4'
+    'REMOTE_PORT' => '46264'
+    'REMOTE_ADDR' => '172.23.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.24.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/web'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1720168360.5536
+    'REQUEST_TIME' => 1720168360
+    'argv' => []
+    'argc' => 0
+]
+2024-07-05 08:32:41 [172.23.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in /var/www/html/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('favicon.ico', Array)
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Страница не найдена. in /var/www/html/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2024-07-05 08:32:41 [172.23.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'e78f3a38e540434b695f53f3d6b6ab60'
+    '_csrf' => '3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og\";}'
+    'XDEBUG_SESSION' => 'docker'
+]
+
+$_SERVER = [
+    'HOSTNAME' => 'a9bcc8ae7371'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/'
+    'XDEBUG_CONFIG' => 'client_host=host.docker.internal'
+    'PHP_IDE_CONFIG' => 'serverName=docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.2.13'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz'
+    'XDEBUG_MODE' => 'off'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'XDEBUG_TRIGGER' => 'yes'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b'
+    'HTTP_COOKIE' => 'PHPSESSID=e78f3a38e540434b695f53f3d6b6ab60; _csrf=3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og%22%3B%7D; XDEBUG_SESSION=docker'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_REFERER' => 'http://127.0.0.1:8012/web'
+    'HTTP_SEC_FETCH_DEST' => 'image'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_ACCEPT' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8012'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'default_server'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.23.0.4'
+    'REMOTE_PORT' => '46264'
+    'REMOTE_ADDR' => '172.23.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.24.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/favicon.ico'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1720168361.5329
+    'REQUEST_TIME' => 1720168361
+    'argv' => []
+    'argc' => 0
+]
+2024-07-05 08:32:47 [172.23.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/html/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Страница не найдена. in /var/www/html/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2024-07-05 08:32:47 [172.23.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'e78f3a38e540434b695f53f3d6b6ab60'
+    '_csrf' => '3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og\";}'
+    'XDEBUG_SESSION' => 'docker'
+]
+
+$_SERVER = [
+    'HOSTNAME' => 'a9bcc8ae7371'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/'
+    'XDEBUG_CONFIG' => 'client_host=host.docker.internal'
+    'PHP_IDE_CONFIG' => 'serverName=docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.2.13'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz'
+    'XDEBUG_MODE' => 'off'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'XDEBUG_TRIGGER' => 'yes'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_COOKIE' => 'PHPSESSID=e78f3a38e540434b695f53f3d6b6ab60; _csrf=3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og%22%3B%7D; XDEBUG_SESSION=docker'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8012'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'default_server'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.23.0.4'
+    'REMOTE_PORT' => '46264'
+    'REMOTE_ADDR' => '172.23.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.24.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1720168367.1776
+    'REQUEST_TIME' => 1720168367
+    'argv' => []
+    'argc' => 0
+]
+2024-07-05 08:33:03 [172.23.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/html/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Страница не найдена. in /var/www/html/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2024-07-05 08:33:02 [172.23.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'e78f3a38e540434b695f53f3d6b6ab60'
+    '_csrf' => '3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og\";}'
+    'XDEBUG_SESSION' => 'docker'
+]
+
+$_SERVER = [
+    'HOSTNAME' => 'a9bcc8ae7371'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/'
+    'XDEBUG_CONFIG' => 'client_host=host.docker.internal'
+    'PHP_IDE_CONFIG' => 'serverName=docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.2.13'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz'
+    'XDEBUG_MODE' => 'off'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'XDEBUG_TRIGGER' => 'yes'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b'
+    'HTTP_COOKIE' => 'PHPSESSID=e78f3a38e540434b695f53f3d6b6ab60; _csrf=3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og%22%3B%7D; XDEBUG_SESSION=docker'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8012'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'default_server'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.23.0.4'
+    'REMOTE_PORT' => '46264'
+    'REMOTE_ADDR' => '172.23.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.24.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1720168382.7319
+    'REQUEST_TIME' => 1720168382
+    'argv' => []
+    'argc' => 0
+]
+2024-07-05 08:33:29 [172.23.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/html/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Страница не найдена. in /var/www/html/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2024-07-05 08:33:29 [172.23.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'e78f3a38e540434b695f53f3d6b6ab60'
+    '_csrf' => '3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og\";}'
+    'XDEBUG_SESSION' => 'docker'
+]
+
+$_SERVER = [
+    'HOSTNAME' => 'a9bcc8ae7371'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/'
+    'XDEBUG_CONFIG' => 'client_host=host.docker.internal'
+    'PHP_IDE_CONFIG' => 'serverName=docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.2.13'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz'
+    'XDEBUG_MODE' => 'off'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'XDEBUG_TRIGGER' => 'yes'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_COOKIE' => 'PHPSESSID=e78f3a38e540434b695f53f3d6b6ab60; _csrf=3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og%22%3B%7D; XDEBUG_SESSION=docker'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8012'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'default_server'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.23.0.4'
+    'REMOTE_PORT' => '46264'
+    'REMOTE_ADDR' => '172.23.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.24.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/index.php'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1720168409.7581
+    'REQUEST_TIME' => 1720168409
+    'argv' => []
+    'argc' => 0
+]
+2024-07-05 08:33:53 [172.23.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "index". in /var/www/html/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('index', Array)
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Страница не найдена. in /var/www/html/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2024-07-05 08:33:53 [172.23.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'e78f3a38e540434b695f53f3d6b6ab60'
+    '_csrf' => '3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og\";}'
+    'XDEBUG_SESSION' => 'docker'
+]
+
+$_SERVER = [
+    'HOSTNAME' => 'a9bcc8ae7371'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/'
+    'XDEBUG_CONFIG' => 'client_host=host.docker.internal'
+    'PHP_IDE_CONFIG' => 'serverName=docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.2.13'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz'
+    'XDEBUG_MODE' => 'off'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'XDEBUG_TRIGGER' => 'yes'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_COOKIE' => 'PHPSESSID=e78f3a38e540434b695f53f3d6b6ab60; _csrf=3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og%22%3B%7D; XDEBUG_SESSION=docker'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8012'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'default_server'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.23.0.4'
+    'REMOTE_PORT' => '46264'
+    'REMOTE_ADDR' => '172.23.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.24.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/index'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1720168433.1113
+    'REQUEST_TIME' => 1720168433
+    'argv' => []
+    'argc' => 0
+]
+2024-07-05 08:36:23 [172.25.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "index". in /var/www/html/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('index', Array)
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Страница не найдена. in /var/www/html/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2024-07-05 08:36:23 [172.25.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'e78f3a38e540434b695f53f3d6b6ab60'
+    '_csrf' => '3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og\";}'
+    'XDEBUG_SESSION' => 'docker'
+]
+
+$_SERVER = [
+    'HOSTNAME' => '239b2575f822'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/'
+    'XDEBUG_CONFIG' => 'client_host=host.docker.internal'
+    'PHP_IDE_CONFIG' => 'serverName=docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.2.13'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz'
+    'XDEBUG_MODE' => 'debug'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'XDEBUG_TRIGGER' => 'yes'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b'
+    'HTTP_COOKIE' => 'PHPSESSID=e78f3a38e540434b695f53f3d6b6ab60; _csrf=3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og%22%3B%7D; XDEBUG_SESSION=docker'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8012'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'default_server'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.25.0.4'
+    'REMOTE_PORT' => '43220'
+    'REMOTE_ADDR' => '172.25.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.24.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/index'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1720168583.0878
+    'REQUEST_TIME' => 1720168583
+    'argv' => []
+    'argc' => 0
+]
+2024-07-05 08:37:54 [172.25.0.1][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'app\controllers\BoxController' in file: /var/www/html/controllers/BoxController.php. Namespace missing? in /var/www/html/vendor/yiisoft/yii2/BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\controllers...')
+#1 /var/www/html/vendor/yiisoft/yii2/base/Module.php(661): class_exists('app\\controllers...')
+#2 /var/www/html/vendor/yiisoft/yii2/base/Module.php(620): yii\base\Module->createControllerByID('box')
+#3 /var/www/html/vendor/yiisoft/yii2/base/Module.php(546): yii\base\Module->createController('index')
+#4 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('box/index', Array)
+#5 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /var/www/html/web/index.php(12): yii\base\Application->run()
+#7 {main}
+2024-07-05 08:37:54 [172.25.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'e78f3a38e540434b695f53f3d6b6ab60'
+    '_csrf' => '3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og\";}'
+    'XDEBUG_SESSION' => 'docker'
+]
+
+$_SERVER = [
+    'HOSTNAME' => '239b2575f822'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/'
+    'XDEBUG_CONFIG' => 'client_host=host.docker.internal'
+    'PHP_IDE_CONFIG' => 'serverName=docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.2.13'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz'
+    'XDEBUG_MODE' => 'debug'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'XDEBUG_TRIGGER' => 'yes'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_COOKIE' => 'PHPSESSID=e78f3a38e540434b695f53f3d6b6ab60; _csrf=3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og%22%3B%7D; XDEBUG_SESSION=docker'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8012'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'default_server'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.25.0.4'
+    'REMOTE_PORT' => '43220'
+    'REMOTE_ADDR' => '172.25.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.24.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/boxes'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1720168673.9652
+    'REQUEST_TIME' => 1720168673
+    'argv' => []
+    'argc' => 0
+]
+2024-07-05 08:38:29 [172.25.0.1][-][-][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: /var/www/html/views/layouts/main.php in /var/www/html/vendor/yiisoft/yii2/base/View.php:234
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/var/www/html/v...', Array, Object(app\controllers\BoxController))
+#1 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('\r\n<!doctype htm...')
+#2 /var/www/html/controllers/BoxController.php(11): yii\base\Controller->render('index')
+#3 [internal function]: app\controllers\BoxController->actionIndex()
+#4 /var/www/html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('index', Array)
+#7 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('box/index', Array)
+#8 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/web/index.php(12): yii\base\Application->run()
+#10 {main}
+2024-07-05 08:38:28 [172.25.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'e78f3a38e540434b695f53f3d6b6ab60'
+    '_csrf' => '3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og\";}'
+    'XDEBUG_SESSION' => 'docker'
+]
+
+$_SERVER = [
+    'HOSTNAME' => '239b2575f822'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/'
+    'XDEBUG_CONFIG' => 'client_host=host.docker.internal'
+    'PHP_IDE_CONFIG' => 'serverName=docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.2.13'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz'
+    'XDEBUG_MODE' => 'debug'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'XDEBUG_TRIGGER' => 'yes'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b'
+    'HTTP_COOKIE' => 'PHPSESSID=e78f3a38e540434b695f53f3d6b6ab60; _csrf=3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og%22%3B%7D; XDEBUG_SESSION=docker'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8012'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'default_server'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.25.0.4'
+    'REMOTE_PORT' => '43220'
+    'REMOTE_ADDR' => '172.25.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.24.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/boxes'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1720168708.5842
+    'REQUEST_TIME' => 1720168708
+    'argv' => []
+    'argc' => 0
+]
+2024-07-05 08:41:12 [172.25.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/html/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Страница не найдена. in /var/www/html/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2024-07-05 08:41:12 [172.25.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'e78f3a38e540434b695f53f3d6b6ab60'
+    '_csrf' => '3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og\";}'
+    'XDEBUG_SESSION' => 'docker'
+]
+
+$_SERVER = [
+    'HOSTNAME' => '239b2575f822'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/'
+    'XDEBUG_CONFIG' => 'client_host=host.docker.internal'
+    'PHP_IDE_CONFIG' => 'serverName=docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.2.13'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz'
+    'XDEBUG_MODE' => 'debug'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'XDEBUG_TRIGGER' => 'yes'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_COOKIE' => 'PHPSESSID=e78f3a38e540434b695f53f3d6b6ab60; _csrf=3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og%22%3B%7D; XDEBUG_SESSION=docker'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_PURPOSE' => 'prefetch'
+    'HTTP_SEC_PURPOSE' => 'prefetch;prerender'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8012'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'default_server'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.25.0.4'
+    'REMOTE_PORT' => '48238'
+    'REMOTE_ADDR' => '172.25.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.24.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1720168871.9238
+    'REQUEST_TIME' => 1720168871
+    'argv' => []
+    'argc' => 0
+]
+2024-07-05 08:41:12 [172.25.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/html/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Страница не найдена. in /var/www/html/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2024-07-05 08:41:12 [172.25.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'e78f3a38e540434b695f53f3d6b6ab60'
+    '_csrf' => '3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og\";}'
+    'XDEBUG_SESSION' => 'docker'
+]
+
+$_SERVER = [
+    'HOSTNAME' => '239b2575f822'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/'
+    'XDEBUG_CONFIG' => 'client_host=host.docker.internal'
+    'PHP_IDE_CONFIG' => 'serverName=docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.2.13'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz'
+    'XDEBUG_MODE' => 'debug'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'XDEBUG_TRIGGER' => 'yes'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_COOKIE' => 'PHPSESSID=e78f3a38e540434b695f53f3d6b6ab60; _csrf=3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og%22%3B%7D; XDEBUG_SESSION=docker'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8012'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'default_server'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.25.0.4'
+    'REMOTE_PORT' => '48238'
+    'REMOTE_ADDR' => '172.25.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.24.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1720168872.7345
+    'REQUEST_TIME' => 1720168872
+    'argv' => []
+    'argc' => 0
+]

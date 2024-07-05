@@ -17,6 +17,8 @@ RUN apk add --no-cache linux-headers \
 	&& pecl clear-cache \
 	&& apk del .build-dependencies
 
+RUN composer install --no-cache
+
 WORKDIR /var/www/html
 
 USER ${USER}
