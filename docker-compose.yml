@@ -1,12 +1,4 @@
-version: '3.9'
 services:
-
-  composer_installation:
-    container_name: composer_installation
-    image: composer
-    volumes:
-      - ./:/app
-    command: composer install --ignore-platform-reqs
 
   php-fpm:
     build:
@@ -17,12 +9,14 @@ services:
     volumes:
       - ./:/var/www/html
     environment:
+      DB_HOST: ${DB_HOST}
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
       PHP_IDE_CONFIG: ${PHP_IDE_CONFIG:-serverName=docker}
       XDEBUG_MODE: ${XDEBUG_MODE:-off}
       XDEBUG_CONFIG: "client_host=host.docker.internal"
       XDEBUG_TRIGGER: ${XDEBUG_TRIGGER:-yes}
-    depends_on:
-      - composer_installation
 
   nginx:
     build:
@@ -37,13 +31,13 @@ services:
       PHP_UPSTREAM_PORT: 9000
     depends_on:
       - php-fpm
-      - db
+      - mysqldb
     volumes:
       - ./web:/var/www/html/web
 
-  db:
+  mysqldb:
     image: mysql
-    container_name: boxes-db
+    container_name: boxes-mysqldb
     environment:
       MYSQL_DATABASE: ${DB_NAME}
       MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
@@ -52,7 +46,7 @@ services:
     ports:
       - ${DB_PORT}:3306
     volumes:
-      - mysql:/var/lib/mysql
+      - /mysql/data:/var/lib/mysql
 
 volumes:
   mysql:
