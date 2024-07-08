@@ -1,11 +1,9 @@
 FROM php:8.2-fpm-alpine3.17
 
-RUN apk add --no-cache linux-headers \
-	&& apk add --update --no-cache --virtual .build-dependencies $PHPIZE_DEPS\
-	&& pecl install xdebug \
-	&& docker-php-ext-enable xdebug \
-	&& pecl clear-cache \
-	&& apk del .build-dependencies
+COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
 
-CMD php-fpm
+RUN install-php-extensions  @composer-2 pdo_mysql xdebug
+
+CMD composer install --ignore-platform-reqs && php-fpm
+
 EXPOSE 9000

@@ -7,11 +7,17 @@ return [
     'name' => 'Система управления коробками',
     'language' => 'ru',
     'defaultRoute' => 'box/index',
-    'layout' => false,
+    'layout' => 'main',
     'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log'],
+    'bootstrap' => [
+        'log'
+    ],
+    'aliases' => [
+        '@bower' => '@vendor/bower-asset',
+        '@npm' => '@vendor/npm-asset',
+    ],
     'components' => [
-//        'db' => require __DIR__ . '/db.php',
+        'db' => require __DIR__ . '/db.php',
         'request' => [
             'cookieValidationKey' => 'sF6ugQqWMYrNL4Q',
             'parsers' => ['application/json' => JsonParser::class]

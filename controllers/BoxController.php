@@ -2,12 +2,34 @@
 
 namespace app\controllers;
 
+use app\models\Box;
+use app\models\BoxSearch;
+use Yii;
+use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 
 class BoxController extends Controller
 {
     public function actionIndex()
     {
-        return $this->render('index');
+        $model = new BoxSearch();
+        $dataProvider = $model->search(Yii::$app->request->get());
+
+        return $this->render('index', [
+            'dataProvider' => $dataProvider,
+            'model' => $model,
+        ]);
+    }
+
+    public function actionDelete($id)
+    {
+        Box::findOne($id)->delete();
+
+        if (Yii::$app->request->isAjax) {
+            Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+            return ['success' => true];
+        }
+
+        return $this->redirect(['index']);
     }
 }
