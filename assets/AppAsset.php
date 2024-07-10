@@ -12,9 +12,9 @@ class AppAsset extends AssetBundle
         'css/style.css',
         'css/bootstrap.min.css'
     ];
-//    public $js = [
-//        'js/index.js',
-//    ];
+    public $js = [
+        'js/bootstrap.min.js',
+    ];
     public $depends = [
         'yii\web\YiiAsset'
     ];
