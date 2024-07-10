@@ -1,10 +1,8 @@
 <?php
 
-use yii\bootstrap5\Modal;
 use yii\grid\ActionColumn;
 use yii\grid\GridView;
 use yii\helpers\Html;
-use yii\helpers\Url;
 use yii\widgets\Pjax;
 
 $this->title = 'Таблица коробок';
@@ -24,20 +22,10 @@ $this->title = 'Таблица коробок';
     <div class="mt-2">
         <div class="row px-5"></div>
         <h2 class="text-center"><?= Html::encode($this->title) ?></h2>
-        <?= Html::a('Добавить',
-            ['/box/create'],
-            [
-                'title' => 'Добавить',
-                'class' => 'btn btn-success btn-create',
-                'url' => Url::to(['/box/create'])
-            ]
-        );
-        ?>
 
-        <?php Pjax::begin(['id' => 'my_pjax', 'timeout' => 1000]); ?>
+        <?php Pjax::begin(['id' => 'my_pjax']); ?>
         <?= GridView::widget([
             'dataProvider' => $dataProvider,
-            'id' => 'boxes-grid',
 //            'filterModel' => $model,
             'tableOptions' => ['class' => 'table table-bordered table-hover'],
             'layout' => "{summary}\n{items}\n{pager}",
@@ -76,21 +64,13 @@ $this->title = 'Таблица коробок';
                     'class' => ActionColumn::class,
                     'template' => '{view} {update} {delete}',
                     'buttons' => [
-                        'update' => function ($url) {
-                            return Html::a('<span class="glyphicon glyphicon-pencil"></span>',
-                                false,
-                                [
-                                    'class' => 'btn-update',
-                                    'title' => 'Редактировать',
-                                    'url' => $url
-                                ]);
-                        },
                         'delete' => function ($url) {
                             return Html::a('<span class="glyphicon glyphicon-trash"></span>',
                                 false, [
-                                    'class' => 'btn-delete',
+                                    'class' => 'pjax-delete-link',
                                     'title' => 'Удалить',
-                                    'delete-url' => $url
+                                    'delete-url' => $url,
+                                    'pjax-container' => 'my_pjax',
                                 ]);
                         },
                     ],
@@ -100,22 +80,20 @@ $this->title = 'Таблица коробок';
         ]) ?>
         <?php Pjax::end(); ?>
     </div>
-
-    <div id="modal-container"></div>
 </main>
 </body>
 </html>
 
 <?php
-
 $js = <<<JS
     $(document).ready(delete_record);
     $(document).ajaxSuccess(delete_record);
 
     function delete_record() {
-        $('.btn-delete').on('click', function(e) {
+        $('.pjax-delete-link').on('click', function(e) {
             e.preventDefault();
             var deleteUrl = $(this).attr('delete-url');
+            var pjaxContainer = $(this).attr('pjax-container');
             var result = confirm('Вы уверены, что хотите удалить?');                                
             if(result) {
                 $.ajax({
@@ -125,41 +103,12 @@ $js = <<<JS
                         alert('Ошибка запроса.' + xhr.responseText);
                     }
                 }).done(function(data) {
-                    $.pjax.reload({container:"#my_pjax", timeout: false});
+                    $.pjax.reload('#' + $.trim(pjaxContainer), {timeout: 3000});
                 });
             }
         });
 
     }
-    
-    $(document).ready(load_box_form);
-    function load_box_form() {
-        $('.btn-create, .btn-update').on('click', function () {
-            $.get($(this).attr('url'), function(data) {
-                $('#modal-container').html(data);
-                $('#box-modal').modal('show');
-           });
-           return false;
-        });
-    }
-    
-    let modalContainer = $('#modal-container');
-       
-    modalContainer.on('beforeSubmit', 'form', function () {
-        let form = $(this);
-        let data = form.serialize();
-        
-        $.ajax({
-            url: form.attr('action'),
-               data: data,
-               type: 'POST'
-        }).done(function(data) {
-            $('#box-modal').modal('hide');
-            $.pjax.reload({container:"#my_pjax"});
-        });
-         
-        return false;
-    });
 JS;
 
 $this->registerJs($js);
