@@ -23,10 +23,10 @@ class BoxController extends Controller
 
     public function actionDelete($id)
     {
-        Box::findOne($id)->delete();
-
         if (Yii::$app->request->isAjax) {
+            Box::findOne($id)->delete();
             Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
             return ['success' => true];
         }
 
