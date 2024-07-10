@@ -15,4 +15,24 @@ use yii\db\ActiveRecord;
  */
 class Box extends ActiveRecord
 {
+    public function addByForm(BoxForm $form)
+    {
+        $this->weight = $form->weight;
+        $this->width = $form->width;
+        $this->length = $form->length;
+        $this->height = $form->height;
+        $this->reference = $form->reference;
+        $this->save();
+    }
+
+    public function updateByForm(BoxForm $form)
+    {
+        $this->weight = $form->weight;
+        $this->width = $form->width;
+        $this->length = $form->length;
+        $this->height = $form->height;
+        $this->reference = $form->reference;
+        $this->status = $form->status;
+        $this->update();
+    }
 }
