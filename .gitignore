@@ -8,5 +8,3 @@ composer.lock
 
 # composer vendor dir
 /vendor
-
-/web/assets/*
