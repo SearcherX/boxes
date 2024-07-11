@@ -11,7 +11,7 @@ use yii\db\ActiveRecord;
  * @property float length
  * @property float height
  * @property int reference
- * @property int status
+ * @property Status status
  */
 class Box extends ActiveRecord
 {

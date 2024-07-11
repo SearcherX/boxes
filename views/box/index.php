@@ -1,5 +1,6 @@
 <?php
 
+use app\models\Status;
 use yii\bootstrap5\Modal;
 use yii\grid\ActionColumn;
 use yii\grid\GridView;
@@ -69,6 +70,9 @@ $this->title = 'Таблица коробок';
                 [
                     'attribute' => 'status',
                     'label' => 'Статус',
+                    'value' => function ($model) {
+                        return Status::getStatusByValue($model->status)?->getName();
+                    },
                     'sortLinkOptions' => ['class' => 'app-link link-offset-2 link-underline-opacity-25 
                             link-underline-opacity-100-hover']
                 ],
