@@ -37604,3 +37604,2894 @@ $_SERVER = [
     'argv' => []
     'argc' => 0
 ]
+2024-07-10 13:33:45 [172.19.0.1][-][-][error][Error] Error: Object of class app\models\Status could not be converted to string in /var/www/html/vendor/yiisoft/yii2/helpers/BaseHtml.php:118
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/helpers/BaseHtml.php(1955): yii\helpers\BaseHtml::encode(Object(app\models\Status))
+#1 /var/www/html/vendor/yiisoft/yii2/helpers/BaseHtml.php(851): yii\helpers\BaseHtml::renderSelectOptions(1, Array, Array)
+#2 /var/www/html/vendor/yiisoft/yii2/helpers/BaseHtml.php(1865): yii\helpers\BaseHtml::dropDownList('BoxForm[status]', 1, Array, Array)
+#3 /var/www/html/vendor/yiisoft/yii2/helpers/BaseHtml.php(1698): yii\helpers\BaseHtml::activeListInput('dropDownList', Object(app\models\BoxForm), 'status', Array, Array)
+#4 /var/www/html/vendor/yiisoft/yii2/widgets/ActiveField.php(654): yii\helpers\BaseHtml::activeDropDownList(Object(app\models\BoxForm), 'status', Array, Array)
+#5 /var/www/html/views/box/box.php(40): yii\widgets\ActiveField->dropDownList(Array, Array)
+#6 /var/www/html/vendor/yiisoft/yii2/base/View.php(348): require('/var/www/html/v...')
+#7 /var/www/html/vendor/yiisoft/yii2/base/View.php(258): yii\base\View->renderPhpFile('/var/www/html/v...', Array)
+#8 /var/www/html/vendor/yiisoft/yii2/web/View.php(227): yii\base\View->renderFile('/var/www/html/v...', Array, Object(app\controllers\BoxController))
+#9 /var/www/html/vendor/yiisoft/yii2/web/Controller.php(50): yii\web\View->renderAjax('box', Array, Object(app\controllers\BoxController))
+#10 /var/www/html/controllers/BoxController.php(55): yii\web\Controller->renderAjax('box', Array)
+#11 [internal function]: app\controllers\BoxController->actionUpdate('17')
+#12 /var/www/html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#13 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#14 /var/www/html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('update', Array)
+#15 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('box/update', Array)
+#16 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 /var/www/html/web/index.php(12): yii\base\Application->run()
+#18 {main}
+2024-07-10 13:33:44 [172.19.0.1][-][-][info][application] $_GET = [
+    'id' => '17'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'e78f3a38e540434b695f53f3d6b6ab60'
+    '_csrf' => '3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og\";}'
+    'XDEBUG_SESSION' => 'yes'
+]
+
+$_SERVER = [
+    'HOSTNAME' => 'c96bbc5138b6'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/'
+    'DB_NAME' => 'boxes_db'
+    'XDEBUG_CONFIG' => 'client_host=host.docker.internal'
+    'PHP_IDE_CONFIG' => 'serverName=docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.2.13'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz'
+    'XDEBUG_MODE' => 'debug'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'XDEBUG_TRIGGER' => 'yes'
+    'DB_PASSWORD' => '123'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b'
+    'DB_HOST' => 'boxes-mysqldb'
+    'DB_USER' => 'user1'
+    'HTTP_COOKIE' => 'PHPSESSID=e78f3a38e540434b695f53f3d6b6ab60; _csrf=3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og%22%3B%7D; XDEBUG_SESSION=yes'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_REFERER' => 'http://127.0.0.1:8012/'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_X_CSRF_TOKEN' => 'mXC-BiYqbodOkgEVwLX4HQOeIuYozx5HfCDS2qgux_XKEv1cch5c1n7dVGCG9rFCUdBk1GSWSytFZZCf7xaIkg=='
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8012'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'default_server'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.19.0.4'
+    'REMOTE_PORT' => '37236'
+    'REMOTE_ADDR' => '172.19.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.24.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/index.php/box/update?id=17'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=17'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1720618424.8279
+    'REQUEST_TIME' => 1720618424
+    'argv' => [
+        0 => 'id=17'
+    ]
+    'argc' => 1
+]
+2024-07-10 13:33:48 [172.19.0.1][-][-][error][Error] Error: Object of class app\models\Status could not be converted to string in /var/www/html/vendor/yiisoft/yii2/helpers/BaseHtml.php:118
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/helpers/BaseHtml.php(1955): yii\helpers\BaseHtml::encode(Object(app\models\Status))
+#1 /var/www/html/vendor/yiisoft/yii2/helpers/BaseHtml.php(851): yii\helpers\BaseHtml::renderSelectOptions(1, Array, Array)
+#2 /var/www/html/vendor/yiisoft/yii2/helpers/BaseHtml.php(1865): yii\helpers\BaseHtml::dropDownList('BoxForm[status]', 1, Array, Array)
+#3 /var/www/html/vendor/yiisoft/yii2/helpers/BaseHtml.php(1698): yii\helpers\BaseHtml::activeListInput('dropDownList', Object(app\models\BoxForm), 'status', Array, Array)
+#4 /var/www/html/vendor/yiisoft/yii2/widgets/ActiveField.php(654): yii\helpers\BaseHtml::activeDropDownList(Object(app\models\BoxForm), 'status', Array, Array)
+#5 /var/www/html/views/box/box.php(40): yii\widgets\ActiveField->dropDownList(Array, Array)
+#6 /var/www/html/vendor/yiisoft/yii2/base/View.php(348): require('/var/www/html/v...')
+#7 /var/www/html/vendor/yiisoft/yii2/base/View.php(258): yii\base\View->renderPhpFile('/var/www/html/v...', Array)
+#8 /var/www/html/vendor/yiisoft/yii2/web/View.php(227): yii\base\View->renderFile('/var/www/html/v...', Array, Object(app\controllers\BoxController))
+#9 /var/www/html/vendor/yiisoft/yii2/web/Controller.php(50): yii\web\View->renderAjax('box', Array, Object(app\controllers\BoxController))
+#10 /var/www/html/controllers/BoxController.php(55): yii\web\Controller->renderAjax('box', Array)
+#11 [internal function]: app\controllers\BoxController->actionUpdate('17')
+#12 /var/www/html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#13 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#14 /var/www/html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('update', Array)
+#15 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('box/update', Array)
+#16 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 /var/www/html/web/index.php(12): yii\base\Application->run()
+#18 {main}
+2024-07-10 13:33:48 [172.19.0.1][-][-][info][application] $_GET = [
+    'id' => '17'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'e78f3a38e540434b695f53f3d6b6ab60'
+    '_csrf' => '3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og\";}'
+    'XDEBUG_SESSION' => 'yes'
+]
+
+$_SERVER = [
+    'HOSTNAME' => 'c96bbc5138b6'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/'
+    'DB_NAME' => 'boxes_db'
+    'XDEBUG_CONFIG' => 'client_host=host.docker.internal'
+    'PHP_IDE_CONFIG' => 'serverName=docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.2.13'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz'
+    'XDEBUG_MODE' => 'debug'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'XDEBUG_TRIGGER' => 'yes'
+    'DB_PASSWORD' => '123'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b'
+    'DB_HOST' => 'boxes-mysqldb'
+    'DB_USER' => 'user1'
+    'HTTP_COOKIE' => 'PHPSESSID=e78f3a38e540434b695f53f3d6b6ab60; _csrf=3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og%22%3B%7D; XDEBUG_SESSION=yes'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_REFERER' => 'http://127.0.0.1:8012/'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_X_CSRF_TOKEN' => 'mXC-BiYqbodOkgEVwLX4HQOeIuYozx5HfCDS2qgux_XKEv1cch5c1n7dVGCG9rFCUdBk1GSWSytFZZCf7xaIkg=='
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8012'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'default_server'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.19.0.4'
+    'REMOTE_PORT' => '37236'
+    'REMOTE_ADDR' => '172.19.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.24.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/index.php/box/update?id=17'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=17'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1720618428.0353
+    'REQUEST_TIME' => 1720618428
+    'argv' => [
+        0 => 'id=17'
+    ]
+    'argc' => 1
+]
+2024-07-10 13:33:51 [172.19.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "css/bootstrap.min.css.map". in /var/www/html/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('css/bootstrap.m...', Array)
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Страница не найдена. in /var/www/html/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2024-07-10 13:33:51 [172.19.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'e78f3a38e540434b695f53f3d6b6ab60'
+    '_csrf' => '3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og\";}'
+    'XDEBUG_SESSION' => 'yes'
+]
+
+$_SERVER = [
+    'HOSTNAME' => 'c96bbc5138b6'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/'
+    'DB_NAME' => 'boxes_db'
+    'XDEBUG_CONFIG' => 'client_host=host.docker.internal'
+    'PHP_IDE_CONFIG' => 'serverName=docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.2.13'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz'
+    'XDEBUG_MODE' => 'debug'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'XDEBUG_TRIGGER' => 'yes'
+    'DB_PASSWORD' => '123'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b'
+    'DB_HOST' => 'boxes-mysqldb'
+    'DB_USER' => 'user1'
+    'HTTP_COOKIE' => 'PHPSESSID=e78f3a38e540434b695f53f3d6b6ab60; _csrf=3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og%22%3B%7D; XDEBUG_SESSION=yes'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8012'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'default_server'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.19.0.4'
+    'REMOTE_PORT' => '37244'
+    'REMOTE_ADDR' => '172.19.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.24.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/css/bootstrap.min.css.map'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1720618431.0256
+    'REQUEST_TIME' => 1720618431
+    'argv' => []
+    'argc' => 0
+]
+2024-07-10 13:33:51 [172.19.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "js/bootstrap.min.js.map". in /var/www/html/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('js/bootstrap.mi...', Array)
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Страница не найдена. in /var/www/html/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2024-07-10 13:33:51 [172.19.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'e78f3a38e540434b695f53f3d6b6ab60'
+    '_csrf' => '3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og\";}'
+    'XDEBUG_SESSION' => 'yes'
+]
+
+$_SERVER = [
+    'HOSTNAME' => 'c96bbc5138b6'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/'
+    'DB_NAME' => 'boxes_db'
+    'XDEBUG_CONFIG' => 'client_host=host.docker.internal'
+    'PHP_IDE_CONFIG' => 'serverName=docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.2.13'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz'
+    'XDEBUG_MODE' => 'debug'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'XDEBUG_TRIGGER' => 'yes'
+    'DB_PASSWORD' => '123'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b'
+    'DB_HOST' => 'boxes-mysqldb'
+    'DB_USER' => 'user1'
+    'HTTP_COOKIE' => 'PHPSESSID=e78f3a38e540434b695f53f3d6b6ab60; _csrf=3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og%22%3B%7D; XDEBUG_SESSION=yes'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8012'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'default_server'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.19.0.4'
+    'REMOTE_PORT' => '37236'
+    'REMOTE_ADDR' => '172.19.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.24.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/js/bootstrap.min.js.map'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1720618431.0181
+    'REQUEST_TIME' => 1720618431
+    'argv' => []
+    'argc' => 0
+]
+2024-07-10 13:33:59 [172.19.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "css/bootstrap.min.css.map". in /var/www/html/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('css/bootstrap.m...', Array)
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Страница не найдена. in /var/www/html/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2024-07-10 13:33:58 [172.19.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'e78f3a38e540434b695f53f3d6b6ab60'
+    '_csrf' => '3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og\";}'
+    'XDEBUG_SESSION' => 'yes'
+]
+
+$_SERVER = [
+    'HOSTNAME' => 'c96bbc5138b6'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/'
+    'DB_NAME' => 'boxes_db'
+    'XDEBUG_CONFIG' => 'client_host=host.docker.internal'
+    'PHP_IDE_CONFIG' => 'serverName=docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.2.13'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz'
+    'XDEBUG_MODE' => 'debug'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'XDEBUG_TRIGGER' => 'yes'
+    'DB_PASSWORD' => '123'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b'
+    'DB_HOST' => 'boxes-mysqldb'
+    'DB_USER' => 'user1'
+    'HTTP_COOKIE' => 'PHPSESSID=e78f3a38e540434b695f53f3d6b6ab60; _csrf=3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og%22%3B%7D; XDEBUG_SESSION=yes'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8012'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'default_server'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.19.0.4'
+    'REMOTE_PORT' => '37244'
+    'REMOTE_ADDR' => '172.19.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.24.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/css/bootstrap.min.css.map'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1720618438.9541
+    'REQUEST_TIME' => 1720618438
+    'argv' => []
+    'argc' => 0
+]
+2024-07-10 13:33:59 [172.19.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "js/bootstrap.min.js.map". in /var/www/html/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('js/bootstrap.mi...', Array)
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Страница не найдена. in /var/www/html/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2024-07-10 13:33:59 [172.19.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'e78f3a38e540434b695f53f3d6b6ab60'
+    '_csrf' => '3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og\";}'
+    'XDEBUG_SESSION' => 'yes'
+]
+
+$_SERVER = [
+    'HOSTNAME' => 'c96bbc5138b6'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/'
+    'DB_NAME' => 'boxes_db'
+    'XDEBUG_CONFIG' => 'client_host=host.docker.internal'
+    'PHP_IDE_CONFIG' => 'serverName=docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.2.13'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz'
+    'XDEBUG_MODE' => 'debug'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'XDEBUG_TRIGGER' => 'yes'
+    'DB_PASSWORD' => '123'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b'
+    'DB_HOST' => 'boxes-mysqldb'
+    'DB_USER' => 'user1'
+    'HTTP_COOKIE' => 'PHPSESSID=e78f3a38e540434b695f53f3d6b6ab60; _csrf=3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og%22%3B%7D; XDEBUG_SESSION=yes'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8012'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'default_server'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.19.0.4'
+    'REMOTE_PORT' => '37236'
+    'REMOTE_ADDR' => '172.19.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.24.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/js/bootstrap.min.js.map'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1720618439.0078
+    'REQUEST_TIME' => 1720618439
+    'argv' => []
+    'argc' => 0
+]
+2024-07-10 13:34:08 [172.19.0.1][-][-][error][Error] Error: Object of class app\models\Status could not be converted to string in /var/www/html/vendor/yiisoft/yii2/helpers/BaseHtml.php:118
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/helpers/BaseHtml.php(1955): yii\helpers\BaseHtml::encode(Object(app\models\Status))
+#1 /var/www/html/vendor/yiisoft/yii2/helpers/BaseHtml.php(851): yii\helpers\BaseHtml::renderSelectOptions(1, Array, Array)
+#2 /var/www/html/vendor/yiisoft/yii2/helpers/BaseHtml.php(1865): yii\helpers\BaseHtml::dropDownList('BoxForm[status]', 1, Array, Array)
+#3 /var/www/html/vendor/yiisoft/yii2/helpers/BaseHtml.php(1698): yii\helpers\BaseHtml::activeListInput('dropDownList', Object(app\models\BoxForm), 'status', Array, Array)
+#4 /var/www/html/vendor/yiisoft/yii2/widgets/ActiveField.php(654): yii\helpers\BaseHtml::activeDropDownList(Object(app\models\BoxForm), 'status', Array, Array)
+#5 /var/www/html/views/box/box.php(40): yii\widgets\ActiveField->dropDownList(Array, Array)
+#6 /var/www/html/vendor/yiisoft/yii2/base/View.php(348): require('/var/www/html/v...')
+#7 /var/www/html/vendor/yiisoft/yii2/base/View.php(258): yii\base\View->renderPhpFile('/var/www/html/v...', Array)
+#8 /var/www/html/vendor/yiisoft/yii2/web/View.php(227): yii\base\View->renderFile('/var/www/html/v...', Array, Object(app\controllers\BoxController))
+#9 /var/www/html/vendor/yiisoft/yii2/web/Controller.php(50): yii\web\View->renderAjax('box', Array, Object(app\controllers\BoxController))
+#10 /var/www/html/controllers/BoxController.php(55): yii\web\Controller->renderAjax('box', Array)
+#11 [internal function]: app\controllers\BoxController->actionUpdate('17')
+#12 /var/www/html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#13 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#14 /var/www/html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('update', Array)
+#15 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('box/update', Array)
+#16 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 /var/www/html/web/index.php(12): yii\base\Application->run()
+#18 {main}
+2024-07-10 13:34:07 [172.19.0.1][-][-][info][application] $_GET = [
+    'id' => '17'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'e78f3a38e540434b695f53f3d6b6ab60'
+    '_csrf' => '3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og\";}'
+    'XDEBUG_SESSION' => 'yes'
+]
+
+$_SERVER = [
+    'HOSTNAME' => 'c96bbc5138b6'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/'
+    'DB_NAME' => 'boxes_db'
+    'XDEBUG_CONFIG' => 'client_host=host.docker.internal'
+    'PHP_IDE_CONFIG' => 'serverName=docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.2.13'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz'
+    'XDEBUG_MODE' => 'debug'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'XDEBUG_TRIGGER' => 'yes'
+    'DB_PASSWORD' => '123'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b'
+    'DB_HOST' => 'boxes-mysqldb'
+    'DB_USER' => 'user1'
+    'HTTP_COOKIE' => 'PHPSESSID=e78f3a38e540434b695f53f3d6b6ab60; _csrf=3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og%22%3B%7D; XDEBUG_SESSION=yes'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_REFERER' => 'http://127.0.0.1:8012/'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_X_CSRF_TOKEN' => 'ANWnTiLyOWVTv7GfqSYgh_iGOr-EG5mY4Prv4JDnYNdTt-QUdsYLNGPw5OrvZWnYqsh8jchCzPTZv62l198vsA=='
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8012'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'default_server'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.19.0.4'
+    'REMOTE_PORT' => '37236'
+    'REMOTE_ADDR' => '172.19.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.24.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/index.php/box/update?id=17'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=17'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1720618447.6818
+    'REQUEST_TIME' => 1720618447
+    'argv' => [
+        0 => 'id=17'
+    ]
+    'argc' => 1
+]
+2024-07-10 13:34:54 [172.19.0.1][-][-][error][Error] Error: Object of class app\models\Status could not be converted to string in /var/www/html/vendor/yiisoft/yii2/helpers/BaseHtml.php:118
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/helpers/BaseHtml.php(1955): yii\helpers\BaseHtml::encode(Object(app\models\Status))
+#1 /var/www/html/vendor/yiisoft/yii2/helpers/BaseHtml.php(851): yii\helpers\BaseHtml::renderSelectOptions(1, Array, Array)
+#2 /var/www/html/vendor/yiisoft/yii2/helpers/BaseHtml.php(1865): yii\helpers\BaseHtml::dropDownList('BoxForm[status]', 1, Array, Array)
+#3 /var/www/html/vendor/yiisoft/yii2/helpers/BaseHtml.php(1698): yii\helpers\BaseHtml::activeListInput('dropDownList', Object(app\models\BoxForm), 'status', Array, Array)
+#4 /var/www/html/vendor/yiisoft/yii2/widgets/ActiveField.php(654): yii\helpers\BaseHtml::activeDropDownList(Object(app\models\BoxForm), 'status', Array, Array)
+#5 /var/www/html/views/box/box.php(40): yii\widgets\ActiveField->dropDownList(Array, Array)
+#6 /var/www/html/vendor/yiisoft/yii2/base/View.php(348): require('/var/www/html/v...')
+#7 /var/www/html/vendor/yiisoft/yii2/base/View.php(258): yii\base\View->renderPhpFile('/var/www/html/v...', Array)
+#8 /var/www/html/vendor/yiisoft/yii2/web/View.php(227): yii\base\View->renderFile('/var/www/html/v...', Array, Object(app\controllers\BoxController))
+#9 /var/www/html/vendor/yiisoft/yii2/web/Controller.php(50): yii\web\View->renderAjax('box', Array, Object(app\controllers\BoxController))
+#10 /var/www/html/controllers/BoxController.php(55): yii\web\Controller->renderAjax('box', Array)
+#11 [internal function]: app\controllers\BoxController->actionUpdate('17')
+#12 /var/www/html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#13 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#14 /var/www/html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('update', Array)
+#15 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('box/update', Array)
+#16 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 /var/www/html/web/index.php(12): yii\base\Application->run()
+#18 {main}
+2024-07-10 13:34:54 [172.19.0.1][-][-][info][application] $_GET = [
+    'id' => '17'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'e78f3a38e540434b695f53f3d6b6ab60'
+    '_csrf' => '3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og\";}'
+    'XDEBUG_SESSION' => 'yes'
+]
+
+$_SERVER = [
+    'HOSTNAME' => 'c96bbc5138b6'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/'
+    'DB_NAME' => 'boxes_db'
+    'XDEBUG_CONFIG' => 'client_host=host.docker.internal'
+    'PHP_IDE_CONFIG' => 'serverName=docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.2.13'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz'
+    'XDEBUG_MODE' => 'debug'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'XDEBUG_TRIGGER' => 'yes'
+    'DB_PASSWORD' => '123'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b'
+    'DB_HOST' => 'boxes-mysqldb'
+    'DB_USER' => 'user1'
+    'HTTP_COOKIE' => 'PHPSESSID=e78f3a38e540434b695f53f3d6b6ab60; _csrf=3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og%22%3B%7D; XDEBUG_SESSION=yes'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_REFERER' => 'http://127.0.0.1:8012/'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_X_CSRF_TOKEN' => 'a-1_MvQKMaiFnMWGYy_L9SA7b-GHpbzF8aOSLyd-Tk04jzxooD4D-bXTkPMlbIKqcnUp08v86anI5tBqYEYBKg=='
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8012'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'default_server'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.19.0.4'
+    'REMOTE_PORT' => '37236'
+    'REMOTE_ADDR' => '172.19.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.24.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/index.php/box/update?id=17'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=17'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1720618494.1944
+    'REQUEST_TIME' => 1720618494
+    'argv' => [
+        0 => 'id=17'
+    ]
+    'argc' => 1
+]
+2024-07-10 14:06:43 [172.23.0.1][-][-][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: app\models\Box::getStatus() in /var/www/html/vendor/yiisoft/yii2/base/Component.php:308
+Stack trace:
+#0 /var/www/html/views/box/index.php(73): yii\base\Component->__call('getStatus', Array)
+#1 [internal function]: yii\base\View->{closure}(Object(app\models\Box), 18, 0, Object(yii\grid\DataColumn))
+#2 /var/www/html/vendor/yiisoft/yii2/grid/DataColumn.php(252): call_user_func(Object(Closure), Object(app\models\Box), 18, 0, Object(yii\grid\DataColumn))
+#3 /var/www/html/vendor/yiisoft/yii2/grid/DataColumn.php(266): yii\grid\DataColumn->getDataCellValue(Object(app\models\Box), 18, 0)
+#4 /var/www/html/vendor/yiisoft/yii2/grid/Column.php(111): yii\grid\DataColumn->renderDataCellContent(Object(app\models\Box), 18, 0)
+#5 /var/www/html/vendor/yiisoft/yii2/grid/GridView.php(525): yii\grid\Column->renderDataCell(Object(app\models\Box), 18, 0)
+#6 /var/www/html/vendor/yiisoft/yii2/grid/GridView.php(494): yii\grid\GridView->renderTableRow(Object(app\models\Box), 18, 0)
+#7 /var/www/html/vendor/yiisoft/yii2/grid/GridView.php(358): yii\grid\GridView->renderTableBody()
+#8 /var/www/html/vendor/yiisoft/yii2/widgets/BaseListView.php(160): yii\grid\GridView->renderItems()
+#9 /var/www/html/vendor/yiisoft/yii2/grid/GridView.php(326): yii\widgets\BaseListView->renderSection('{items}')
+#10 /var/www/html/vendor/yiisoft/yii2/widgets/BaseListView.php(135): yii\grid\GridView->renderSection('{items}')
+#11 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#12 /var/www/html/vendor/yiisoft/yii2/widgets/BaseListView.php(134): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#13 /var/www/html/vendor/yiisoft/yii2/grid/GridView.php(301): yii\widgets\BaseListView->run()
+#14 /var/www/html/vendor/yiisoft/yii2/base/Widget.php(146): yii\grid\GridView->run()
+#15 /var/www/html/views/box/index.php(38): yii\base\Widget::widget(Array)
+#16 /var/www/html/vendor/yiisoft/yii2/base/View.php(348): require('/var/www/html/v...')
+#17 /var/www/html/vendor/yiisoft/yii2/base/View.php(258): yii\base\View->renderPhpFile('/var/www/html/v...', Array)
+#18 /var/www/html/vendor/yiisoft/yii2/base/View.php(157): yii\base\View->renderFile('/var/www/html/v...', Array, Object(app\controllers\BoxController))
+#19 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(407): yii\base\View->render('index', Array, Object(app\controllers\BoxController))
+#20 /var/www/html/controllers/BoxController.php(20): yii\base\Controller->render('index', Array)
+#21 [internal function]: app\controllers\BoxController->actionIndex()
+#22 /var/www/html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#23 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#24 /var/www/html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('index', Array)
+#25 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#26 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 /var/www/html/web/index.php(12): yii\base\Application->run()
+#28 {main}
+2024-07-10 14:06:42 [172.23.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'e78f3a38e540434b695f53f3d6b6ab60'
+    '_csrf' => '3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og\";}'
+    'XDEBUG_SESSION' => 'yes'
+]
+
+$_SERVER = [
+    'HOSTNAME' => '722f783149ab'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/'
+    'DB_NAME' => 'boxes_db'
+    'XDEBUG_CONFIG' => 'client_host=host.docker.internal'
+    'PHP_IDE_CONFIG' => 'serverName=docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.2.13'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz'
+    'XDEBUG_MODE' => 'debug'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'XDEBUG_TRIGGER' => 'yes'
+    'DB_PASSWORD' => '123'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b'
+    'DB_HOST' => 'boxes-mysqldb'
+    'DB_USER' => 'user1'
+    'HTTP_COOKIE' => 'PHPSESSID=e78f3a38e540434b695f53f3d6b6ab60; _csrf=3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og%22%3B%7D; XDEBUG_SESSION=yes'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_REFERER' => 'http://127.0.0.1:8012/'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8012'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'default_server'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.23.0.4'
+    'REMOTE_PORT' => '59046'
+    'REMOTE_ADDR' => '172.23.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.24.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1720620402.331
+    'REQUEST_TIME' => 1720620402
+    'argv' => []
+    'argc' => 0
+]
+2024-07-10 14:07:00 [172.23.0.1][-][-][error][Error] Error: Call to a member function getName() on int in /var/www/html/views/box/index.php:73
+Stack trace:
+#0 [internal function]: yii\base\View->{closure}(Object(app\models\Box), 18, 0, Object(yii\grid\DataColumn))
+#1 /var/www/html/vendor/yiisoft/yii2/grid/DataColumn.php(252): call_user_func(Object(Closure), Object(app\models\Box), 18, 0, Object(yii\grid\DataColumn))
+#2 /var/www/html/vendor/yiisoft/yii2/grid/DataColumn.php(266): yii\grid\DataColumn->getDataCellValue(Object(app\models\Box), 18, 0)
+#3 /var/www/html/vendor/yiisoft/yii2/grid/Column.php(111): yii\grid\DataColumn->renderDataCellContent(Object(app\models\Box), 18, 0)
+#4 /var/www/html/vendor/yiisoft/yii2/grid/GridView.php(525): yii\grid\Column->renderDataCell(Object(app\models\Box), 18, 0)
+#5 /var/www/html/vendor/yiisoft/yii2/grid/GridView.php(494): yii\grid\GridView->renderTableRow(Object(app\models\Box), 18, 0)
+#6 /var/www/html/vendor/yiisoft/yii2/grid/GridView.php(358): yii\grid\GridView->renderTableBody()
+#7 /var/www/html/vendor/yiisoft/yii2/widgets/BaseListView.php(160): yii\grid\GridView->renderItems()
+#8 /var/www/html/vendor/yiisoft/yii2/grid/GridView.php(326): yii\widgets\BaseListView->renderSection('{items}')
+#9 /var/www/html/vendor/yiisoft/yii2/widgets/BaseListView.php(135): yii\grid\GridView->renderSection('{items}')
+#10 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#11 /var/www/html/vendor/yiisoft/yii2/widgets/BaseListView.php(134): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#12 /var/www/html/vendor/yiisoft/yii2/grid/GridView.php(301): yii\widgets\BaseListView->run()
+#13 /var/www/html/vendor/yiisoft/yii2/base/Widget.php(146): yii\grid\GridView->run()
+#14 /var/www/html/views/box/index.php(38): yii\base\Widget::widget(Array)
+#15 /var/www/html/vendor/yiisoft/yii2/base/View.php(348): require('/var/www/html/v...')
+#16 /var/www/html/vendor/yiisoft/yii2/base/View.php(258): yii\base\View->renderPhpFile('/var/www/html/v...', Array)
+#17 /var/www/html/vendor/yiisoft/yii2/base/View.php(157): yii\base\View->renderFile('/var/www/html/v...', Array, Object(app\controllers\BoxController))
+#18 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(407): yii\base\View->render('index', Array, Object(app\controllers\BoxController))
+#19 /var/www/html/controllers/BoxController.php(20): yii\base\Controller->render('index', Array)
+#20 [internal function]: app\controllers\BoxController->actionIndex()
+#21 /var/www/html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#22 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#23 /var/www/html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('index', Array)
+#24 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#25 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#26 /var/www/html/web/index.php(12): yii\base\Application->run()
+#27 {main}
+2024-07-10 14:06:59 [172.23.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'e78f3a38e540434b695f53f3d6b6ab60'
+    '_csrf' => '3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og\";}'
+    'XDEBUG_SESSION' => 'yes'
+]
+
+$_SERVER = [
+    'HOSTNAME' => '722f783149ab'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/'
+    'DB_NAME' => 'boxes_db'
+    'XDEBUG_CONFIG' => 'client_host=host.docker.internal'
+    'PHP_IDE_CONFIG' => 'serverName=docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.2.13'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz'
+    'XDEBUG_MODE' => 'debug'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'XDEBUG_TRIGGER' => 'yes'
+    'DB_PASSWORD' => '123'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b'
+    'DB_HOST' => 'boxes-mysqldb'
+    'DB_USER' => 'user1'
+    'HTTP_COOKIE' => 'PHPSESSID=e78f3a38e540434b695f53f3d6b6ab60; _csrf=3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og%22%3B%7D; XDEBUG_SESSION=yes'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_REFERER' => 'http://127.0.0.1:8012/'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8012'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'default_server'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.23.0.4'
+    'REMOTE_PORT' => '59046'
+    'REMOTE_ADDR' => '172.23.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.24.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1720620419.5307
+    'REQUEST_TIME' => 1720620419
+    'argv' => []
+    'argc' => 0
+]
+2024-07-10 14:19:40 [172.25.0.1][-][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: yii\web\View::serchModel in /var/www/html/vendor/yiisoft/yii2/base/Component.php:154
+Stack trace:
+#0 /var/www/html/views/box/index.php(72): yii\base\Component->__get('serchModel')
+#1 /var/www/html/vendor/yiisoft/yii2/base/View.php(348): require('/var/www/html/v...')
+#2 /var/www/html/vendor/yiisoft/yii2/base/View.php(258): yii\base\View->renderPhpFile('/var/www/html/v...', Array)
+#3 /var/www/html/vendor/yiisoft/yii2/base/View.php(157): yii\base\View->renderFile('/var/www/html/v...', Array, Object(app\controllers\BoxController))
+#4 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(407): yii\base\View->render('index', Array, Object(app\controllers\BoxController))
+#5 /var/www/html/controllers/BoxController.php(20): yii\base\Controller->render('index', Array)
+#6 [internal function]: app\controllers\BoxController->actionIndex()
+#7 /var/www/html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('index', Array)
+#10 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#11 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/web/index.php(12): yii\base\Application->run()
+#13 {main}
+2024-07-10 14:19:39 [172.25.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'e78f3a38e540434b695f53f3d6b6ab60'
+    '_csrf' => '3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og\";}'
+    'XDEBUG_SESSION' => 'yes'
+]
+
+$_SERVER = [
+    'HOSTNAME' => '2d3f45a1ce08'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/'
+    'DB_NAME' => 'boxes_db'
+    'XDEBUG_CONFIG' => 'client_host=host.docker.internal'
+    'PHP_IDE_CONFIG' => 'serverName=docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.2.13'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz'
+    'XDEBUG_MODE' => 'debug'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'XDEBUG_TRIGGER' => 'yes'
+    'DB_PASSWORD' => '123'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b'
+    'DB_HOST' => 'boxes-mysqldb'
+    'DB_USER' => 'user1'
+    'HTTP_COOKIE' => 'PHPSESSID=e78f3a38e540434b695f53f3d6b6ab60; _csrf=3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og%22%3B%7D; XDEBUG_SESSION=yes'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_REFERER' => 'http://127.0.0.1:8012/'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8012'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'default_server'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.25.0.4'
+    'REMOTE_PORT' => '53600'
+    'REMOTE_ADDR' => '172.25.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.24.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1720621179.9386
+    'REQUEST_TIME' => 1720621179
+    'argv' => []
+    'argc' => 0
+]
+2024-07-10 14:19:58 [172.25.0.1][-][-][error][TypeError] TypeError: call_user_func(): Argument #1 ($callback) must be a valid callback, no array or string given in /var/www/html/vendor/yiisoft/yii2/grid/DataColumn.php:252
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/grid/DataColumn.php(252): call_user_func(Object(yii\web\View), Object(app\models\Box), 18, 0, Object(yii\grid\DataColumn))
+#1 /var/www/html/vendor/yiisoft/yii2/grid/DataColumn.php(266): yii\grid\DataColumn->getDataCellValue(Object(app\models\Box), 18, 0)
+#2 /var/www/html/vendor/yiisoft/yii2/grid/Column.php(111): yii\grid\DataColumn->renderDataCellContent(Object(app\models\Box), 18, 0)
+#3 /var/www/html/vendor/yiisoft/yii2/grid/GridView.php(525): yii\grid\Column->renderDataCell(Object(app\models\Box), 18, 0)
+#4 /var/www/html/vendor/yiisoft/yii2/grid/GridView.php(494): yii\grid\GridView->renderTableRow(Object(app\models\Box), 18, 0)
+#5 /var/www/html/vendor/yiisoft/yii2/grid/GridView.php(358): yii\grid\GridView->renderTableBody()
+#6 /var/www/html/vendor/yiisoft/yii2/widgets/BaseListView.php(160): yii\grid\GridView->renderItems()
+#7 /var/www/html/vendor/yiisoft/yii2/grid/GridView.php(326): yii\widgets\BaseListView->renderSection('{items}')
+#8 /var/www/html/vendor/yiisoft/yii2/widgets/BaseListView.php(135): yii\grid\GridView->renderSection('{items}')
+#9 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#10 /var/www/html/vendor/yiisoft/yii2/widgets/BaseListView.php(134): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#11 /var/www/html/vendor/yiisoft/yii2/grid/GridView.php(301): yii\widgets\BaseListView->run()
+#12 /var/www/html/vendor/yiisoft/yii2/base/Widget.php(146): yii\grid\GridView->run()
+#13 /var/www/html/views/box/index.php(38): yii\base\Widget::widget(Array)
+#14 /var/www/html/vendor/yiisoft/yii2/base/View.php(348): require('/var/www/html/v...')
+#15 /var/www/html/vendor/yiisoft/yii2/base/View.php(258): yii\base\View->renderPhpFile('/var/www/html/v...', Array)
+#16 /var/www/html/vendor/yiisoft/yii2/base/View.php(157): yii\base\View->renderFile('/var/www/html/v...', Array, Object(app\controllers\BoxController))
+#17 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(407): yii\base\View->render('index', Array, Object(app\controllers\BoxController))
+#18 /var/www/html/controllers/BoxController.php(20): yii\base\Controller->render('index', Array)
+#19 [internal function]: app\controllers\BoxController->actionIndex()
+#20 /var/www/html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#21 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#22 /var/www/html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('index', Array)
+#23 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#24 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#25 /var/www/html/web/index.php(12): yii\base\Application->run()
+#26 {main}
+2024-07-10 14:19:57 [172.25.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'e78f3a38e540434b695f53f3d6b6ab60'
+    '_csrf' => '3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og\";}'
+    'XDEBUG_SESSION' => 'yes'
+]
+
+$_SERVER = [
+    'HOSTNAME' => '2d3f45a1ce08'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/'
+    'DB_NAME' => 'boxes_db'
+    'XDEBUG_CONFIG' => 'client_host=host.docker.internal'
+    'PHP_IDE_CONFIG' => 'serverName=docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.2.13'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz'
+    'XDEBUG_MODE' => 'debug'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'XDEBUG_TRIGGER' => 'yes'
+    'DB_PASSWORD' => '123'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b'
+    'DB_HOST' => 'boxes-mysqldb'
+    'DB_USER' => 'user1'
+    'HTTP_COOKIE' => 'PHPSESSID=e78f3a38e540434b695f53f3d6b6ab60; _csrf=3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og%22%3B%7D; XDEBUG_SESSION=yes'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_REFERER' => 'http://127.0.0.1:8012/'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8012'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'default_server'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.25.0.4'
+    'REMOTE_PORT' => '53600'
+    'REMOTE_ADDR' => '172.25.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.24.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1720621197.356
+    'REQUEST_TIME' => 1720621197
+    'argv' => []
+    'argc' => 0
+]
+2024-07-10 14:32:10 [172.26.0.1][-][-][error][Error] Error: Object of class app\models\Status could not be converted to string in /var/www/html/vendor/yiisoft/yii2/helpers/BaseHtml.php:118
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/i18n/Formatter.php(498): yii\helpers\BaseHtml::encode(Object(app\models\Status))
+#1 [internal function]: yii\i18n\Formatter->asText(Object(app\models\Status))
+#2 /var/www/html/vendor/yiisoft/yii2/i18n/Formatter.php(463): call_user_func_array(Array, Array)
+#3 /var/www/html/vendor/yiisoft/yii2/grid/DataColumn.php(266): yii\i18n\Formatter->format(Object(app\models\Status), 'text')
+#4 /var/www/html/vendor/yiisoft/yii2/grid/Column.php(111): yii\grid\DataColumn->renderDataCellContent(Object(app\models\Box), 18, 0)
+#5 /var/www/html/vendor/yiisoft/yii2/grid/GridView.php(525): yii\grid\Column->renderDataCell(Object(app\models\Box), 18, 0)
+#6 /var/www/html/vendor/yiisoft/yii2/grid/GridView.php(494): yii\grid\GridView->renderTableRow(Object(app\models\Box), 18, 0)
+#7 /var/www/html/vendor/yiisoft/yii2/grid/GridView.php(358): yii\grid\GridView->renderTableBody()
+#8 /var/www/html/vendor/yiisoft/yii2/widgets/BaseListView.php(160): yii\grid\GridView->renderItems()
+#9 /var/www/html/vendor/yiisoft/yii2/grid/GridView.php(326): yii\widgets\BaseListView->renderSection('{items}')
+#10 /var/www/html/vendor/yiisoft/yii2/widgets/BaseListView.php(135): yii\grid\GridView->renderSection('{items}')
+#11 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#12 /var/www/html/vendor/yiisoft/yii2/widgets/BaseListView.php(134): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#13 /var/www/html/vendor/yiisoft/yii2/grid/GridView.php(301): yii\widgets\BaseListView->run()
+#14 /var/www/html/vendor/yiisoft/yii2/base/Widget.php(146): yii\grid\GridView->run()
+#15 /var/www/html/views/box/index.php(39): yii\base\Widget::widget(Array)
+#16 /var/www/html/vendor/yiisoft/yii2/base/View.php(348): require('/var/www/html/v...')
+#17 /var/www/html/vendor/yiisoft/yii2/base/View.php(258): yii\base\View->renderPhpFile('/var/www/html/v...', Array)
+#18 /var/www/html/vendor/yiisoft/yii2/base/View.php(157): yii\base\View->renderFile('/var/www/html/v...', Array, Object(app\controllers\BoxController))
+#19 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(407): yii\base\View->render('index', Array, Object(app\controllers\BoxController))
+#20 /var/www/html/controllers/BoxController.php(20): yii\base\Controller->render('index', Array)
+#21 [internal function]: app\controllers\BoxController->actionIndex()
+#22 /var/www/html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#23 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#24 /var/www/html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('index', Array)
+#25 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#26 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 /var/www/html/web/index.php(12): yii\base\Application->run()
+#28 {main}
+2024-07-10 14:32:09 [172.26.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'e78f3a38e540434b695f53f3d6b6ab60'
+    '_csrf' => '3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og\";}'
+    'XDEBUG_SESSION' => 'yes'
+]
+
+$_SERVER = [
+    'HOSTNAME' => 'd7293ee43fc6'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/'
+    'DB_NAME' => 'boxes_db'
+    'XDEBUG_CONFIG' => 'client_host=host.docker.internal'
+    'PHP_IDE_CONFIG' => 'serverName=docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.2.13'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz'
+    'XDEBUG_MODE' => 'debug'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'XDEBUG_TRIGGER' => 'yes'
+    'DB_PASSWORD' => '123'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b'
+    'DB_HOST' => 'boxes-mysqldb'
+    'DB_USER' => 'user1'
+    'HTTP_COOKIE' => 'PHPSESSID=e78f3a38e540434b695f53f3d6b6ab60; _csrf=3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og%22%3B%7D; XDEBUG_SESSION=yes'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_REFERER' => 'http://127.0.0.1:8012/'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8012'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'default_server'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.26.0.4'
+    'REMOTE_PORT' => '42668'
+    'REMOTE_ADDR' => '172.26.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.24.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1720621929.2542
+    'REQUEST_TIME' => 1720621929
+    'argv' => []
+    'argc' => 0
+]
+2024-07-10 18:33:51 [172.27.0.1][-][-][error][Error] Error: Typed property app\models\BoxForm::$status must not be accessed before initialization in /var/www/html/vendor/yiisoft/yii2/helpers/BaseHtml.php:2291
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/helpers/BaseHtml.php(1857): yii\helpers\BaseHtml::getAttributeValue(Object(app\models\BoxForm), 'status')
+#1 /var/www/html/vendor/yiisoft/yii2/helpers/BaseHtml.php(1698): yii\helpers\BaseHtml::activeListInput('dropDownList', Object(app\models\BoxForm), 'status', Array, Array)
+#2 /var/www/html/vendor/yiisoft/yii2/widgets/ActiveField.php(654): yii\helpers\BaseHtml::activeDropDownList(Object(app\models\BoxForm), 'status', Array, Array)
+#3 /var/www/html/views/box/box.php(40): yii\widgets\ActiveField->dropDownList(Array, Array)
+#4 /var/www/html/vendor/yiisoft/yii2/base/View.php(348): require('/var/www/html/v...')
+#5 /var/www/html/vendor/yiisoft/yii2/base/View.php(258): yii\base\View->renderPhpFile('/var/www/html/v...', Array)
+#6 /var/www/html/vendor/yiisoft/yii2/web/View.php(227): yii\base\View->renderFile('/var/www/html/v...', Array, Object(app\controllers\BoxController))
+#7 /var/www/html/vendor/yiisoft/yii2/web/Controller.php(50): yii\web\View->renderAjax('box', Array, Object(app\controllers\BoxController))
+#8 /var/www/html/controllers/BoxController.php(55): yii\web\Controller->renderAjax('box', Array)
+#9 [internal function]: app\controllers\BoxController->actionUpdate('22')
+#10 /var/www/html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#11 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#12 /var/www/html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('update', Array)
+#13 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('box/update', Array)
+#14 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 /var/www/html/web/index.php(12): yii\base\Application->run()
+#16 {main}
+2024-07-10 18:33:50 [172.27.0.1][-][-][info][application] $_GET = [
+    'id' => '22'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'e78f3a38e540434b695f53f3d6b6ab60'
+    '_csrf' => '3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og\";}'
+    'XDEBUG_SESSION' => 'yes'
+]
+
+$_SERVER = [
+    'HOSTNAME' => 'e153077d5720'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/'
+    'DB_NAME' => 'boxes_db'
+    'XDEBUG_CONFIG' => 'client_host=host.docker.internal'
+    'PHP_IDE_CONFIG' => 'serverName=docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.2.13'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz'
+    'XDEBUG_MODE' => 'debug'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'XDEBUG_TRIGGER' => 'yes'
+    'DB_PASSWORD' => '123'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b'
+    'DB_HOST' => 'boxes-mysqldb'
+    'DB_USER' => 'user1'
+    'HTTP_COOKIE' => 'PHPSESSID=e78f3a38e540434b695f53f3d6b6ab60; _csrf=3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og%22%3B%7D; XDEBUG_SESSION=yes'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_REFERER' => 'http://127.0.0.1:8012/'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_X_CSRF_TOKEN' => 'Zi-FVGYGjdXSWSkn-tBbgWWlb8PZLRb9scZUpGKNYUY1TcYOMjK_hOIWfFK8kxLeN-sp8ZV0Q5GIgxbhJbUuIQ=='
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8012'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'default_server'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.27.0.4'
+    'REMOTE_PORT' => '37940'
+    'REMOTE_ADDR' => '172.27.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.24.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/index.php/box/update?id=22'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=22'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1720636430.3542
+    'REQUEST_TIME' => 1720636430
+    'argv' => [
+        0 => 'id=22'
+    ]
+    'argc' => 1
+]
+2024-07-10 18:34:19 [172.27.0.1][-][-][error][yii\db\Exception] PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo for boxes-mysqldb failed: Try again in /var/www/html/vendor/yiisoft/yii2/db/Connection.php:722
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/db/Connection.php(722): PDO->__construct('mysql:host=boxe...', 'user1', Object(SensitiveParameterValue), NULL)
+#1 /var/www/html/vendor/yiisoft/yii2/db/Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 /var/www/html/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#3 /var/www/html/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 /var/www/html/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 /var/www/html/vendor/yiisoft/yii2/db/Command.php(1181): yii\db\Command->prepare(true)
+#6 /var/www/html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /var/www/html/vendor/yiisoft/yii2/db/mysql/Schema.php(366): yii\db\Command->queryAll()
+#8 /var/www/html/vendor/yiisoft/yii2/db/mysql/Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /var/www/html/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('box')
+#10 /var/www/html/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('{{%box}}', 'schema', false)
+#11 /var/www/html/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%box}}')
+#12 /var/www/html/vendor/yiisoft/yii2/db/ActiveRecord.php(473): yii\db\ActiveRecord::getTableSchema()
+#13 /var/www/html/vendor/yiisoft/yii2/data/ActiveDataProvider.php(181): yii\db\ActiveRecord->attributes()
+#14 /var/www/html/vendor/yiisoft/yii2/base/Component.php(180): yii\data\ActiveDataProvider->setSort(Array)
+#15 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(557): yii\base\Component->__set('sort', Array)
+#16 /var/www/html/vendor/yiisoft/yii2/base/BaseObject.php(107): yii\BaseYii::configure(Object(yii\data\ActiveDataProvider), Array)
+#17 /var/www/html/models/BoxSearch.php(13): yii\base\BaseObject->__construct(Array)
+#18 /var/www/html/controllers/BoxController.php(18): app\models\BoxSearch->search(Array)
+#19 [internal function]: app\controllers\BoxController->actionIndex()
+#20 /var/www/html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#21 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#22 /var/www/html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('index', Array)
+#23 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#24 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#25 /var/www/html/web/index.php(12): yii\base\Application->run()
+#26 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for boxes-mysqldb failed: Try again in /var/www/html/vendor/yiisoft/yii2/db/Connection.php:722
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/db/Connection.php(722): PDO->__construct('mysql:host=boxe...', 'user1', Object(SensitiveParameterValue), NULL)
+#1 /var/www/html/vendor/yiisoft/yii2/db/Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 /var/www/html/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#3 /var/www/html/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 /var/www/html/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 /var/www/html/vendor/yiisoft/yii2/db/Command.php(1181): yii\db\Command->prepare(true)
+#6 /var/www/html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /var/www/html/vendor/yiisoft/yii2/db/mysql/Schema.php(366): yii\db\Command->queryAll()
+#8 /var/www/html/vendor/yiisoft/yii2/db/mysql/Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /var/www/html/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('box')
+#10 /var/www/html/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('{{%box}}', 'schema', false)
+#11 /var/www/html/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%box}}')
+#12 /var/www/html/vendor/yiisoft/yii2/db/ActiveRecord.php(473): yii\db\ActiveRecord::getTableSchema()
+#13 /var/www/html/vendor/yiisoft/yii2/data/ActiveDataProvider.php(181): yii\db\ActiveRecord->attributes()
+#14 /var/www/html/vendor/yiisoft/yii2/base/Component.php(180): yii\data\ActiveDataProvider->setSort(Array)
+#15 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(557): yii\base\Component->__set('sort', Array)
+#16 /var/www/html/vendor/yiisoft/yii2/base/BaseObject.php(107): yii\BaseYii::configure(Object(yii\data\ActiveDataProvider), Array)
+#17 /var/www/html/models/BoxSearch.php(13): yii\base\BaseObject->__construct(Array)
+#18 /var/www/html/controllers/BoxController.php(18): app\models\BoxSearch->search(Array)
+#19 [internal function]: app\controllers\BoxController->actionIndex()
+#20 /var/www/html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#21 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#22 /var/www/html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('index', Array)
+#23 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#24 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#25 /var/www/html/web/index.php(12): yii\base\Application->run()
+#26 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for boxes-mysqldb failed: Try again in /var/www/html/vendor/yiisoft/yii2/db/Connection.php:648
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#1 /var/www/html/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 /var/www/html/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 /var/www/html/vendor/yiisoft/yii2/db/Command.php(1181): yii\db\Command->prepare(true)
+#4 /var/www/html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /var/www/html/vendor/yiisoft/yii2/db/mysql/Schema.php(366): yii\db\Command->queryAll()
+#6 /var/www/html/vendor/yiisoft/yii2/db/mysql/Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /var/www/html/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('box')
+#8 /var/www/html/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('{{%box}}', 'schema', false)
+#9 /var/www/html/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%box}}')
+#10 /var/www/html/vendor/yiisoft/yii2/db/ActiveRecord.php(473): yii\db\ActiveRecord::getTableSchema()
+#11 /var/www/html/vendor/yiisoft/yii2/data/ActiveDataProvider.php(181): yii\db\ActiveRecord->attributes()
+#12 /var/www/html/vendor/yiisoft/yii2/base/Component.php(180): yii\data\ActiveDataProvider->setSort(Array)
+#13 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(557): yii\base\Component->__set('sort', Array)
+#14 /var/www/html/vendor/yiisoft/yii2/base/BaseObject.php(107): yii\BaseYii::configure(Object(yii\data\ActiveDataProvider), Array)
+#15 /var/www/html/models/BoxSearch.php(13): yii\base\BaseObject->__construct(Array)
+#16 /var/www/html/controllers/BoxController.php(18): app\models\BoxSearch->search(Array)
+#17 [internal function]: app\controllers\BoxController->actionIndex()
+#18 /var/www/html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#19 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#20 /var/www/html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('index', Array)
+#21 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#22 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#23 /var/www/html/web/index.php(12): yii\base\Application->run()
+#24 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => php_network_getaddresses: getaddrinfo for boxes-mysqldb failed: Try again
+)
+
+2024-07-10 18:34:09 [172.27.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'e78f3a38e540434b695f53f3d6b6ab60'
+    '_csrf' => '3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og\";}'
+    'XDEBUG_SESSION' => 'yes'
+]
+
+$_SERVER = [
+    'HOSTNAME' => 'e153077d5720'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/'
+    'DB_NAME' => 'boxes_db'
+    'XDEBUG_CONFIG' => 'client_host=host.docker.internal'
+    'PHP_IDE_CONFIG' => 'serverName=docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.2.13'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz'
+    'XDEBUG_MODE' => 'debug'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'XDEBUG_TRIGGER' => 'yes'
+    'DB_PASSWORD' => '123'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b'
+    'DB_HOST' => 'boxes-mysqldb'
+    'DB_USER' => 'user1'
+    'HTTP_COOKIE' => 'PHPSESSID=e78f3a38e540434b695f53f3d6b6ab60; _csrf=3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og%22%3B%7D; XDEBUG_SESSION=yes'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8012'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'default_server'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.27.0.4'
+    'REMOTE_PORT' => '37940'
+    'REMOTE_ADDR' => '172.27.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.24.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1720636444.1927
+    'REQUEST_TIME' => 1720636444
+    'argv' => []
+    'argc' => 0
+]
+2024-07-11 13:11:13 [172.27.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in /var/www/html/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('favicon.ico', Array)
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Страница не найдена. in /var/www/html/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2024-07-11 13:11:12 [172.27.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '461e3794191782734ac5ce853ef77645d7c8f47fae8e7c6fb1220b5416d83fe5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"noQrNXsHK40uA-PthRQrPxUj4M71XitR\";}'
+    'XDEBUG_SESSION' => 'yes'
+]
+
+$_SERVER = [
+    'HOSTNAME' => 'e153077d5720'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/'
+    'DB_NAME' => 'boxes_db'
+    'XDEBUG_CONFIG' => 'client_host=host.docker.internal'
+    'PHP_IDE_CONFIG' => 'serverName=docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.2.13'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz'
+    'XDEBUG_MODE' => 'debug'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'XDEBUG_TRIGGER' => 'yes'
+    'DB_PASSWORD' => '123'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b'
+    'DB_HOST' => 'boxes-mysqldb'
+    'DB_USER' => 'user1'
+    'HTTP_COOKIE' => '_csrf=461e3794191782734ac5ce853ef77645d7c8f47fae8e7c6fb1220b5416d83fe5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22noQrNXsHK40uA-PthRQrPxUj4M71XitR%22%3B%7D; XDEBUG_SESSION=yes'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,ru-RU;q=0.9,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_REFERER' => 'http://127.0.0.1:8012/'
+    'HTTP_SEC_FETCH_DEST' => 'image'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_ACCEPT' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_DNT' => '1'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8012'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'default_server'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.27.0.4'
+    'REMOTE_PORT' => '50360'
+    'REMOTE_ADDR' => '172.27.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.24.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/favicon.ico'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1720703471.6489
+    'REQUEST_TIME' => 1720703471
+    'argv' => []
+    'argc' => 0
+]
+2024-07-11 13:11:21 [172.27.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in /var/www/html/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('favicon.ico', Array)
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Страница не найдена. in /var/www/html/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2024-07-11 13:11:21 [172.27.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'e78f3a38e540434b695f53f3d6b6ab60'
+    '_csrf' => '3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og\";}'
+    'XDEBUG_SESSION' => 'yes'
+]
+
+$_SERVER = [
+    'HOSTNAME' => 'e153077d5720'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/'
+    'DB_NAME' => 'boxes_db'
+    'XDEBUG_CONFIG' => 'client_host=host.docker.internal'
+    'PHP_IDE_CONFIG' => 'serverName=docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.2.13'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz'
+    'XDEBUG_MODE' => 'debug'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'XDEBUG_TRIGGER' => 'yes'
+    'DB_PASSWORD' => '123'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b'
+    'DB_HOST' => 'boxes-mysqldb'
+    'DB_USER' => 'user1'
+    'HTTP_COOKIE' => 'PHPSESSID=e78f3a38e540434b695f53f3d6b6ab60; _csrf=3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og%22%3B%7D; XDEBUG_SESSION=yes'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_REFERER' => 'http://127.0.0.1:8012/'
+    'HTTP_SEC_FETCH_DEST' => 'image'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_ACCEPT' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8012'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'default_server'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.27.0.4'
+    'REMOTE_PORT' => '47984'
+    'REMOTE_ADDR' => '172.27.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.24.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/favicon.ico'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1720703481.3675
+    'REQUEST_TIME' => 1720703481
+    'argv' => []
+    'argc' => 0
+]
+2024-07-11 13:11:40 [172.27.0.1][-][-][error][TypeError] TypeError: app\models\Status::getStatusByValue(): Argument #1 ($value) must be of type int, null given, called in /var/www/html/views/box/index.php on line 74 and defined in /var/www/html/models/Status.php:24
+Stack trace:
+#0 /var/www/html/views/box/index.php(74): app\models\Status::getStatusByValue(NULL)
+#1 [internal function]: yii\base\View->{closure}(Object(app\models\Box), 32, 0, Object(yii\grid\DataColumn))
+#2 /var/www/html/vendor/yiisoft/yii2/grid/DataColumn.php(252): call_user_func(Object(Closure), Object(app\models\Box), 32, 0, Object(yii\grid\DataColumn))
+#3 /var/www/html/vendor/yiisoft/yii2/grid/DataColumn.php(266): yii\grid\DataColumn->getDataCellValue(Object(app\models\Box), 32, 0)
+#4 /var/www/html/vendor/yiisoft/yii2/grid/Column.php(111): yii\grid\DataColumn->renderDataCellContent(Object(app\models\Box), 32, 0)
+#5 /var/www/html/vendor/yiisoft/yii2/grid/GridView.php(525): yii\grid\Column->renderDataCell(Object(app\models\Box), 32, 0)
+#6 /var/www/html/vendor/yiisoft/yii2/grid/GridView.php(494): yii\grid\GridView->renderTableRow(Object(app\models\Box), 32, 0)
+#7 /var/www/html/vendor/yiisoft/yii2/grid/GridView.php(358): yii\grid\GridView->renderTableBody()
+#8 /var/www/html/vendor/yiisoft/yii2/widgets/BaseListView.php(160): yii\grid\GridView->renderItems()
+#9 /var/www/html/vendor/yiisoft/yii2/grid/GridView.php(326): yii\widgets\BaseListView->renderSection('{items}')
+#10 /var/www/html/vendor/yiisoft/yii2/widgets/BaseListView.php(135): yii\grid\GridView->renderSection('{items}')
+#11 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#12 /var/www/html/vendor/yiisoft/yii2/widgets/BaseListView.php(134): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#13 /var/www/html/vendor/yiisoft/yii2/grid/GridView.php(301): yii\widgets\BaseListView->run()
+#14 /var/www/html/vendor/yiisoft/yii2/base/Widget.php(146): yii\grid\GridView->run()
+#15 /var/www/html/views/box/index.php(39): yii\base\Widget::widget(Array)
+#16 /var/www/html/vendor/yiisoft/yii2/base/View.php(348): require('/var/www/html/v...')
+#17 /var/www/html/vendor/yiisoft/yii2/base/View.php(258): yii\base\View->renderPhpFile('/var/www/html/v...', Array)
+#18 /var/www/html/vendor/yiisoft/yii2/base/View.php(157): yii\base\View->renderFile('/var/www/html/v...', Array, Object(app\controllers\BoxController))
+#19 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(407): yii\base\View->render('index', Array, Object(app\controllers\BoxController))
+#20 /var/www/html/controllers/BoxController.php(20): yii\base\Controller->render('index', Array)
+#21 [internal function]: app\controllers\BoxController->actionIndex()
+#22 /var/www/html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#23 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#24 /var/www/html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('index', Array)
+#25 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#26 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 /var/www/html/web/index.php(12): yii\base\Application->run()
+#28 {main}
+2024-07-11 13:11:38 [172.27.0.1][-][-][info][application] $_GET = [
+    '_pjax' => '#my_pjax'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'e78f3a38e540434b695f53f3d6b6ab60'
+    '_csrf' => '3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og\";}'
+    'XDEBUG_SESSION' => 'yes'
+]
+
+$_SERVER = [
+    'HOSTNAME' => 'e153077d5720'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/'
+    'DB_NAME' => 'boxes_db'
+    'XDEBUG_CONFIG' => 'client_host=host.docker.internal'
+    'PHP_IDE_CONFIG' => 'serverName=docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.2.13'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz'
+    'XDEBUG_MODE' => 'debug'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'XDEBUG_TRIGGER' => 'yes'
+    'DB_PASSWORD' => '123'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b'
+    'DB_HOST' => 'boxes-mysqldb'
+    'DB_USER' => 'user1'
+    'HTTP_COOKIE' => 'PHPSESSID=e78f3a38e540434b695f53f3d6b6ab60; _csrf=3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og%22%3B%7D; XDEBUG_SESSION=yes'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_REFERER' => 'http://127.0.0.1:8012/'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_X_PJAX_CONTAINER' => '#my_pjax'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_X_CSRF_TOKEN' => 'vdGlJjpCpyXbYVHTi-oaxAu2S45KYm1BZzB9T5oQLoXus-Z8bnaVdOsuBKbNqVObWfgNvAY7OC1edT8K3Shh4g=='
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8012'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'default_server'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.27.0.4'
+    'REMOTE_PORT' => '39582'
+    'REMOTE_ADDR' => '172.27.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.24.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/?_pjax=%23my_pjax'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => '_pjax=%23my_pjax'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1720703498.2527
+    'REQUEST_TIME' => 1720703498
+    'argv' => [
+        0 => '_pjax=%23my_pjax'
+    ]
+    'argc' => 1
+]
+2024-07-11 13:11:40 [172.27.0.1][-][-][error][TypeError] TypeError: app\models\Status::getStatusByValue(): Argument #1 ($value) must be of type int, null given, called in /var/www/html/views/box/index.php on line 74 and defined in /var/www/html/models/Status.php:24
+Stack trace:
+#0 /var/www/html/views/box/index.php(74): app\models\Status::getStatusByValue(NULL)
+#1 [internal function]: yii\base\View->{closure}(Object(app\models\Box), 32, 0, Object(yii\grid\DataColumn))
+#2 /var/www/html/vendor/yiisoft/yii2/grid/DataColumn.php(252): call_user_func(Object(Closure), Object(app\models\Box), 32, 0, Object(yii\grid\DataColumn))
+#3 /var/www/html/vendor/yiisoft/yii2/grid/DataColumn.php(266): yii\grid\DataColumn->getDataCellValue(Object(app\models\Box), 32, 0)
+#4 /var/www/html/vendor/yiisoft/yii2/grid/Column.php(111): yii\grid\DataColumn->renderDataCellContent(Object(app\models\Box), 32, 0)
+#5 /var/www/html/vendor/yiisoft/yii2/grid/GridView.php(525): yii\grid\Column->renderDataCell(Object(app\models\Box), 32, 0)
+#6 /var/www/html/vendor/yiisoft/yii2/grid/GridView.php(494): yii\grid\GridView->renderTableRow(Object(app\models\Box), 32, 0)
+#7 /var/www/html/vendor/yiisoft/yii2/grid/GridView.php(358): yii\grid\GridView->renderTableBody()
+#8 /var/www/html/vendor/yiisoft/yii2/widgets/BaseListView.php(160): yii\grid\GridView->renderItems()
+#9 /var/www/html/vendor/yiisoft/yii2/grid/GridView.php(326): yii\widgets\BaseListView->renderSection('{items}')
+#10 /var/www/html/vendor/yiisoft/yii2/widgets/BaseListView.php(135): yii\grid\GridView->renderSection('{items}')
+#11 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#12 /var/www/html/vendor/yiisoft/yii2/widgets/BaseListView.php(134): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#13 /var/www/html/vendor/yiisoft/yii2/grid/GridView.php(301): yii\widgets\BaseListView->run()
+#14 /var/www/html/vendor/yiisoft/yii2/base/Widget.php(146): yii\grid\GridView->run()
+#15 /var/www/html/views/box/index.php(39): yii\base\Widget::widget(Array)
+#16 /var/www/html/vendor/yiisoft/yii2/base/View.php(348): require('/var/www/html/v...')
+#17 /var/www/html/vendor/yiisoft/yii2/base/View.php(258): yii\base\View->renderPhpFile('/var/www/html/v...', Array)
+#18 /var/www/html/vendor/yiisoft/yii2/base/View.php(157): yii\base\View->renderFile('/var/www/html/v...', Array, Object(app\controllers\BoxController))
+#19 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(407): yii\base\View->render('index', Array, Object(app\controllers\BoxController))
+#20 /var/www/html/controllers/BoxController.php(20): yii\base\Controller->render('index', Array)
+#21 [internal function]: app\controllers\BoxController->actionIndex()
+#22 /var/www/html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#23 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#24 /var/www/html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('index', Array)
+#25 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#26 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 /var/www/html/web/index.php(12): yii\base\Application->run()
+#28 {main}
+2024-07-11 13:11:38 [172.27.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'e78f3a38e540434b695f53f3d6b6ab60'
+    '_csrf' => '3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og\";}'
+    'XDEBUG_SESSION' => 'yes'
+]
+
+$_SERVER = [
+    'HOSTNAME' => 'e153077d5720'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/'
+    'DB_NAME' => 'boxes_db'
+    'XDEBUG_CONFIG' => 'client_host=host.docker.internal'
+    'PHP_IDE_CONFIG' => 'serverName=docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.2.13'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz'
+    'XDEBUG_MODE' => 'debug'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'XDEBUG_TRIGGER' => 'yes'
+    'DB_PASSWORD' => '123'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b'
+    'DB_HOST' => 'boxes-mysqldb'
+    'DB_USER' => 'user1'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_COOKIE' => 'PHPSESSID=e78f3a38e540434b695f53f3d6b6ab60; _csrf=3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og%22%3B%7D; XDEBUG_SESSION=yes'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_REFERER' => 'http://127.0.0.1:8012/'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8012'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'default_server'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.27.0.4'
+    'REMOTE_PORT' => '47984'
+    'REMOTE_ADDR' => '172.27.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.24.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1720703498.8627
+    'REQUEST_TIME' => 1720703498
+    'argv' => []
+    'argc' => 0
+]
+2024-07-11 13:13:15 [172.27.0.1][-][-][error][Error] Error: Call to a member function getName() on null in /var/www/html/views/box/index.php:74
+Stack trace:
+#0 [internal function]: yii\base\View->{closure}(Object(app\models\Box), 32, 0, Object(yii\grid\DataColumn))
+#1 /var/www/html/vendor/yiisoft/yii2/grid/DataColumn.php(252): call_user_func(Object(Closure), Object(app\models\Box), 32, 0, Object(yii\grid\DataColumn))
+#2 /var/www/html/vendor/yiisoft/yii2/grid/DataColumn.php(266): yii\grid\DataColumn->getDataCellValue(Object(app\models\Box), 32, 0)
+#3 /var/www/html/vendor/yiisoft/yii2/grid/Column.php(111): yii\grid\DataColumn->renderDataCellContent(Object(app\models\Box), 32, 0)
+#4 /var/www/html/vendor/yiisoft/yii2/grid/GridView.php(525): yii\grid\Column->renderDataCell(Object(app\models\Box), 32, 0)
+#5 /var/www/html/vendor/yiisoft/yii2/grid/GridView.php(494): yii\grid\GridView->renderTableRow(Object(app\models\Box), 32, 0)
+#6 /var/www/html/vendor/yiisoft/yii2/grid/GridView.php(358): yii\grid\GridView->renderTableBody()
+#7 /var/www/html/vendor/yiisoft/yii2/widgets/BaseListView.php(160): yii\grid\GridView->renderItems()
+#8 /var/www/html/vendor/yiisoft/yii2/grid/GridView.php(326): yii\widgets\BaseListView->renderSection('{items}')
+#9 /var/www/html/vendor/yiisoft/yii2/widgets/BaseListView.php(135): yii\grid\GridView->renderSection('{items}')
+#10 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#11 /var/www/html/vendor/yiisoft/yii2/widgets/BaseListView.php(134): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#12 /var/www/html/vendor/yiisoft/yii2/grid/GridView.php(301): yii\widgets\BaseListView->run()
+#13 /var/www/html/vendor/yiisoft/yii2/base/Widget.php(146): yii\grid\GridView->run()
+#14 /var/www/html/views/box/index.php(39): yii\base\Widget::widget(Array)
+#15 /var/www/html/vendor/yiisoft/yii2/base/View.php(348): require('/var/www/html/v...')
+#16 /var/www/html/vendor/yiisoft/yii2/base/View.php(258): yii\base\View->renderPhpFile('/var/www/html/v...', Array)
+#17 /var/www/html/vendor/yiisoft/yii2/base/View.php(157): yii\base\View->renderFile('/var/www/html/v...', Array, Object(app\controllers\BoxController))
+#18 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(407): yii\base\View->render('index', Array, Object(app\controllers\BoxController))
+#19 /var/www/html/controllers/BoxController.php(20): yii\base\Controller->render('index', Array)
+#20 [internal function]: app\controllers\BoxController->actionIndex()
+#21 /var/www/html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#22 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#23 /var/www/html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('index', Array)
+#24 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#25 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#26 /var/www/html/web/index.php(12): yii\base\Application->run()
+#27 {main}
+2024-07-11 13:13:15 [172.27.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'e78f3a38e540434b695f53f3d6b6ab60'
+    '_csrf' => '3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og\";}'
+    'XDEBUG_SESSION' => 'yes'
+]
+
+$_SERVER = [
+    'HOSTNAME' => 'e153077d5720'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/'
+    'DB_NAME' => 'boxes_db'
+    'XDEBUG_CONFIG' => 'client_host=host.docker.internal'
+    'PHP_IDE_CONFIG' => 'serverName=docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.2.13'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz'
+    'XDEBUG_MODE' => 'debug'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'XDEBUG_TRIGGER' => 'yes'
+    'DB_PASSWORD' => '123'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b'
+    'DB_HOST' => 'boxes-mysqldb'
+    'DB_USER' => 'user1'
+    'HTTP_COOKIE' => 'PHPSESSID=e78f3a38e540434b695f53f3d6b6ab60; _csrf=3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og%22%3B%7D; XDEBUG_SESSION=yes'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_REFERER' => 'http://127.0.0.1:8012/'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8012'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'default_server'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.27.0.4'
+    'REMOTE_PORT' => '45286'
+    'REMOTE_ADDR' => '172.27.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.24.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1720703595.2107
+    'REQUEST_TIME' => 1720703595
+    'argv' => []
+    'argc' => 0
+]
+2024-07-11 13:17:09 [172.27.0.1][-][-][error][Error] Error: Typed property app\models\BoxForm::$status must not be accessed before initialization in /var/www/html/vendor/yiisoft/yii2/helpers/BaseHtml.php:2291
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/helpers/BaseHtml.php(1857): yii\helpers\BaseHtml::getAttributeValue(Object(app\models\BoxForm), 'status')
+#1 /var/www/html/vendor/yiisoft/yii2/helpers/BaseHtml.php(1698): yii\helpers\BaseHtml::activeListInput('dropDownList', Object(app\models\BoxForm), 'status', Array, Array)
+#2 /var/www/html/vendor/yiisoft/yii2/widgets/ActiveField.php(654): yii\helpers\BaseHtml::activeDropDownList(Object(app\models\BoxForm), 'status', Array, Array)
+#3 /var/www/html/views/box/box.php(40): yii\widgets\ActiveField->dropDownList(Array, Array)
+#4 /var/www/html/vendor/yiisoft/yii2/base/View.php(348): require('/var/www/html/v...')
+#5 /var/www/html/vendor/yiisoft/yii2/base/View.php(258): yii\base\View->renderPhpFile('/var/www/html/v...', Array)
+#6 /var/www/html/vendor/yiisoft/yii2/web/View.php(227): yii\base\View->renderFile('/var/www/html/v...', Array, Object(app\controllers\BoxController))
+#7 /var/www/html/vendor/yiisoft/yii2/web/Controller.php(50): yii\web\View->renderAjax('box', Array, Object(app\controllers\BoxController))
+#8 /var/www/html/controllers/BoxController.php(55): yii\web\Controller->renderAjax('box', Array)
+#9 [internal function]: app\controllers\BoxController->actionUpdate('32')
+#10 /var/www/html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#11 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#12 /var/www/html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('update', Array)
+#13 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('box/update', Array)
+#14 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 /var/www/html/web/index.php(12): yii\base\Application->run()
+#16 {main}
+2024-07-11 13:17:08 [172.27.0.1][-][-][info][application] $_GET = [
+    'id' => '32'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'e78f3a38e540434b695f53f3d6b6ab60'
+    '_csrf' => '3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og\";}'
+    'XDEBUG_SESSION' => 'yes'
+]
+
+$_SERVER = [
+    'HOSTNAME' => 'e153077d5720'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/'
+    'DB_NAME' => 'boxes_db'
+    'XDEBUG_CONFIG' => 'client_host=host.docker.internal'
+    'PHP_IDE_CONFIG' => 'serverName=docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.2.13'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz'
+    'XDEBUG_MODE' => 'debug'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'XDEBUG_TRIGGER' => 'yes'
+    'DB_PASSWORD' => '123'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b'
+    'DB_HOST' => 'boxes-mysqldb'
+    'DB_USER' => 'user1'
+    'HTTP_COOKIE' => 'PHPSESSID=e78f3a38e540434b695f53f3d6b6ab60; _csrf=3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og%22%3B%7D; XDEBUG_SESSION=yes'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_REFERER' => 'http://127.0.0.1:8012/'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_X_CSRF_TOKEN' => 'R9UOPG6MkgGnOy36-j2WYaN0ysd9iEjI7RiItxAqSjwUt01mOrigUJd0eI-8ft8-8TqM9THRHaTUXcryVxIFWw=='
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8012'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'default_server'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.27.0.4'
+    'REMOTE_PORT' => '43428'
+    'REMOTE_ADDR' => '172.27.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.24.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/index.php/box/update?id=32'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=32'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1720703828.4272
+    'REQUEST_TIME' => 1720703828
+    'argv' => [
+        0 => 'id=32'
+    ]
+    'argc' => 1
+]
+2024-07-11 13:17:12 [172.27.0.1][-][-][error][Error] Error: Typed property app\models\BoxForm::$status must not be accessed before initialization in /var/www/html/vendor/yiisoft/yii2/helpers/BaseHtml.php:2291
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/helpers/BaseHtml.php(1857): yii\helpers\BaseHtml::getAttributeValue(Object(app\models\BoxForm), 'status')
+#1 /var/www/html/vendor/yiisoft/yii2/helpers/BaseHtml.php(1698): yii\helpers\BaseHtml::activeListInput('dropDownList', Object(app\models\BoxForm), 'status', Array, Array)
+#2 /var/www/html/vendor/yiisoft/yii2/widgets/ActiveField.php(654): yii\helpers\BaseHtml::activeDropDownList(Object(app\models\BoxForm), 'status', Array, Array)
+#3 /var/www/html/views/box/box.php(40): yii\widgets\ActiveField->dropDownList(Array, Array)
+#4 /var/www/html/vendor/yiisoft/yii2/base/View.php(348): require('/var/www/html/v...')
+#5 /var/www/html/vendor/yiisoft/yii2/base/View.php(258): yii\base\View->renderPhpFile('/var/www/html/v...', Array)
+#6 /var/www/html/vendor/yiisoft/yii2/web/View.php(227): yii\base\View->renderFile('/var/www/html/v...', Array, Object(app\controllers\BoxController))
+#7 /var/www/html/vendor/yiisoft/yii2/web/Controller.php(50): yii\web\View->renderAjax('box', Array, Object(app\controllers\BoxController))
+#8 /var/www/html/controllers/BoxController.php(55): yii\web\Controller->renderAjax('box', Array)
+#9 [internal function]: app\controllers\BoxController->actionUpdate('32')
+#10 /var/www/html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#11 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#12 /var/www/html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('update', Array)
+#13 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('box/update', Array)
+#14 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 /var/www/html/web/index.php(12): yii\base\Application->run()
+#16 {main}
+2024-07-11 13:17:12 [172.27.0.1][-][-][info][application] $_GET = [
+    'id' => '32'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'e78f3a38e540434b695f53f3d6b6ab60'
+    '_csrf' => '3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og\";}'
+    'XDEBUG_SESSION' => 'yes'
+]
+
+$_SERVER = [
+    'HOSTNAME' => 'e153077d5720'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/'
+    'DB_NAME' => 'boxes_db'
+    'XDEBUG_CONFIG' => 'client_host=host.docker.internal'
+    'PHP_IDE_CONFIG' => 'serverName=docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.2.13'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz'
+    'XDEBUG_MODE' => 'debug'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'XDEBUG_TRIGGER' => 'yes'
+    'DB_PASSWORD' => '123'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b'
+    'DB_HOST' => 'boxes-mysqldb'
+    'DB_USER' => 'user1'
+    'HTTP_COOKIE' => 'PHPSESSID=e78f3a38e540434b695f53f3d6b6ab60; _csrf=3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og%22%3B%7D; XDEBUG_SESSION=yes'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_REFERER' => 'http://127.0.0.1:8012/'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_X_CSRF_TOKEN' => 'R9UOPG6MkgGnOy36-j2WYaN0ysd9iEjI7RiItxAqSjwUt01mOrigUJd0eI-8ft8-8TqM9THRHaTUXcryVxIFWw=='
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8012'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'default_server'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.27.0.4'
+    'REMOTE_PORT' => '43428'
+    'REMOTE_ADDR' => '172.27.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.24.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/index.php/box/update?id=32'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=32'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1720703832.2376
+    'REQUEST_TIME' => 1720703832
+    'argv' => [
+        0 => 'id=32'
+    ]
+    'argc' => 1
+]
+2024-07-11 13:17:18 [172.27.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "css/bootstrap.min.css.map". in /var/www/html/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('css/bootstrap.m...', Array)
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Страница не найдена. in /var/www/html/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2024-07-11 13:17:18 [172.27.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'e78f3a38e540434b695f53f3d6b6ab60'
+    '_csrf' => '3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og\";}'
+    'XDEBUG_SESSION' => 'yes'
+]
+
+$_SERVER = [
+    'HOSTNAME' => 'e153077d5720'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/'
+    'DB_NAME' => 'boxes_db'
+    'XDEBUG_CONFIG' => 'client_host=host.docker.internal'
+    'PHP_IDE_CONFIG' => 'serverName=docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.2.13'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz'
+    'XDEBUG_MODE' => 'debug'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'XDEBUG_TRIGGER' => 'yes'
+    'DB_PASSWORD' => '123'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b'
+    'DB_HOST' => 'boxes-mysqldb'
+    'DB_USER' => 'user1'
+    'HTTP_COOKIE' => 'PHPSESSID=e78f3a38e540434b695f53f3d6b6ab60; _csrf=3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og%22%3B%7D; XDEBUG_SESSION=yes'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8012'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'default_server'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.27.0.4'
+    'REMOTE_PORT' => '43432'
+    'REMOTE_ADDR' => '172.27.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.24.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/css/bootstrap.min.css.map'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1720703838.2808
+    'REQUEST_TIME' => 1720703838
+    'argv' => []
+    'argc' => 0
+]
+2024-07-11 13:17:18 [172.27.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "js/bootstrap.min.js.map". in /var/www/html/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('js/bootstrap.mi...', Array)
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Страница не найдена. in /var/www/html/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2024-07-11 13:17:18 [172.27.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'e78f3a38e540434b695f53f3d6b6ab60'
+    '_csrf' => '3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og\";}'
+    'XDEBUG_SESSION' => 'yes'
+]
+
+$_SERVER = [
+    'HOSTNAME' => 'e153077d5720'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/'
+    'DB_NAME' => 'boxes_db'
+    'XDEBUG_CONFIG' => 'client_host=host.docker.internal'
+    'PHP_IDE_CONFIG' => 'serverName=docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.2.13'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz'
+    'XDEBUG_MODE' => 'debug'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'XDEBUG_TRIGGER' => 'yes'
+    'DB_PASSWORD' => '123'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b'
+    'DB_HOST' => 'boxes-mysqldb'
+    'DB_USER' => 'user1'
+    'HTTP_COOKIE' => 'PHPSESSID=e78f3a38e540434b695f53f3d6b6ab60; _csrf=3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og%22%3B%7D; XDEBUG_SESSION=yes'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8012'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'default_server'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.27.0.4'
+    'REMOTE_PORT' => '43428'
+    'REMOTE_ADDR' => '172.27.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.24.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/js/bootstrap.min.js.map'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1720703838.2805
+    'REQUEST_TIME' => 1720703838
+    'argv' => []
+    'argc' => 0
+]
+2024-07-11 13:17:31 [172.27.0.1][-][-][error][Error] Error: Typed property app\models\BoxForm::$status must not be accessed before initialization in /var/www/html/vendor/yiisoft/yii2/helpers/BaseHtml.php:2291
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/helpers/BaseHtml.php(1857): yii\helpers\BaseHtml::getAttributeValue(Object(app\models\BoxForm), 'status')
+#1 /var/www/html/vendor/yiisoft/yii2/helpers/BaseHtml.php(1698): yii\helpers\BaseHtml::activeListInput('dropDownList', Object(app\models\BoxForm), 'status', Array, Array)
+#2 /var/www/html/vendor/yiisoft/yii2/widgets/ActiveField.php(654): yii\helpers\BaseHtml::activeDropDownList(Object(app\models\BoxForm), 'status', Array, Array)
+#3 /var/www/html/views/box/box.php(40): yii\widgets\ActiveField->dropDownList(Array, Array)
+#4 /var/www/html/vendor/yiisoft/yii2/base/View.php(348): require('/var/www/html/v...')
+#5 /var/www/html/vendor/yiisoft/yii2/base/View.php(258): yii\base\View->renderPhpFile('/var/www/html/v...', Array)
+#6 /var/www/html/vendor/yiisoft/yii2/web/View.php(227): yii\base\View->renderFile('/var/www/html/v...', Array, Object(app\controllers\BoxController))
+#7 /var/www/html/vendor/yiisoft/yii2/web/Controller.php(50): yii\web\View->renderAjax('box', Array, Object(app\controllers\BoxController))
+#8 /var/www/html/controllers/BoxController.php(55): yii\web\Controller->renderAjax('box', Array)
+#9 [internal function]: app\controllers\BoxController->actionUpdate('32')
+#10 /var/www/html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#11 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#12 /var/www/html/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('update', Array)
+#13 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('box/update', Array)
+#14 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 /var/www/html/web/index.php(12): yii\base\Application->run()
+#16 {main}
+2024-07-11 13:17:30 [172.27.0.1][-][-][info][application] $_GET = [
+    'id' => '32'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'e78f3a38e540434b695f53f3d6b6ab60'
+    '_csrf' => '3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og\";}'
+    'XDEBUG_SESSION' => 'yes'
+]
+
+$_SERVER = [
+    'HOSTNAME' => 'e153077d5720'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/'
+    'DB_NAME' => 'boxes_db'
+    'XDEBUG_CONFIG' => 'client_host=host.docker.internal'
+    'PHP_IDE_CONFIG' => 'serverName=docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.2.13'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz'
+    'XDEBUG_MODE' => 'debug'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'XDEBUG_TRIGGER' => 'yes'
+    'DB_PASSWORD' => '123'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b'
+    'DB_HOST' => 'boxes-mysqldb'
+    'DB_USER' => 'user1'
+    'HTTP_COOKIE' => 'PHPSESSID=e78f3a38e540434b695f53f3d6b6ab60; _csrf=3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og%22%3B%7D; XDEBUG_SESSION=yes'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_REFERER' => 'http://127.0.0.1:8012/'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_X_CSRF_TOKEN' => 'R9UOPG6MkgGnOy36-j2WYaN0ysd9iEjI7RiItxAqSjwUt01mOrigUJd0eI-8ft8-8TqM9THRHaTUXcryVxIFWw=='
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_SEC_CH_UA' => '\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8012'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'default_server'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.27.0.4'
+    'REMOTE_PORT' => '43428'
+    'REMOTE_ADDR' => '172.27.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.24.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/index.php/box/update?id=32'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=32'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1720703850.7924
+    'REQUEST_TIME' => 1720703850
+    'argv' => [
+        0 => 'id=32'
+    ]
+    'argc' => 1
+]
+2024-07-11 13:18:24 [172.27.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "css/bootstrap.min.css.map". in /var/www/html/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('css/bootstrap.m...', Array)
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Страница не найдена. in /var/www/html/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2024-07-11 13:18:24 [172.27.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'e78f3a38e540434b695f53f3d6b6ab60'
+    '_csrf' => '3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og\";}'
+    'XDEBUG_SESSION' => 'yes'
+]
+
+$_SERVER = [
+    'HOSTNAME' => 'e153077d5720'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/'
+    'DB_NAME' => 'boxes_db'
+    'XDEBUG_CONFIG' => 'client_host=host.docker.internal'
+    'PHP_IDE_CONFIG' => 'serverName=docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.2.13'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz'
+    'XDEBUG_MODE' => 'debug'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'XDEBUG_TRIGGER' => 'yes'
+    'DB_PASSWORD' => '123'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b'
+    'DB_HOST' => 'boxes-mysqldb'
+    'DB_USER' => 'user1'
+    'HTTP_COOKIE' => 'PHPSESSID=e78f3a38e540434b695f53f3d6b6ab60; _csrf=3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og%22%3B%7D; XDEBUG_SESSION=yes'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8012'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'default_server'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.27.0.4'
+    'REMOTE_PORT' => '43428'
+    'REMOTE_ADDR' => '172.27.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.24.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/css/bootstrap.min.css.map'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1720703904.3494
+    'REQUEST_TIME' => 1720703904
+    'argv' => []
+    'argc' => 0
+]
+2024-07-11 13:18:24 [172.27.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "js/bootstrap.min.js.map". in /var/www/html/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('js/bootstrap.mi...', Array)
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Страница не найдена. in /var/www/html/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2024-07-11 13:18:24 [172.27.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'e78f3a38e540434b695f53f3d6b6ab60'
+    '_csrf' => '3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og\";}'
+    'XDEBUG_SESSION' => 'yes'
+]
+
+$_SERVER = [
+    'HOSTNAME' => 'e153077d5720'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/'
+    'DB_NAME' => 'boxes_db'
+    'XDEBUG_CONFIG' => 'client_host=host.docker.internal'
+    'PHP_IDE_CONFIG' => 'serverName=docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.2.13'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz'
+    'XDEBUG_MODE' => 'debug'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'XDEBUG_TRIGGER' => 'yes'
+    'DB_PASSWORD' => '123'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b'
+    'DB_HOST' => 'boxes-mysqldb'
+    'DB_USER' => 'user1'
+    'HTTP_COOKIE' => 'PHPSESSID=e78f3a38e540434b695f53f3d6b6ab60; _csrf=3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og%22%3B%7D; XDEBUG_SESSION=yes'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8012'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'default_server'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.27.0.4'
+    'REMOTE_PORT' => '51960'
+    'REMOTE_ADDR' => '172.27.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.24.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/js/bootstrap.min.js.map'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1720703904.414
+    'REQUEST_TIME' => 1720703904
+    'argv' => []
+    'argc' => 0
+]
+2024-07-11 13:18:33 [172.27.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "js/bootstrap.min.js.map". in /var/www/html/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('js/bootstrap.mi...', Array)
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Страница не найдена. in /var/www/html/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2024-07-11 13:18:33 [172.27.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'e78f3a38e540434b695f53f3d6b6ab60'
+    '_csrf' => '3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og\";}'
+    'XDEBUG_SESSION' => 'yes'
+]
+
+$_SERVER = [
+    'HOSTNAME' => 'e153077d5720'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/'
+    'DB_NAME' => 'boxes_db'
+    'XDEBUG_CONFIG' => 'client_host=host.docker.internal'
+    'PHP_IDE_CONFIG' => 'serverName=docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.2.13'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz'
+    'XDEBUG_MODE' => 'debug'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'XDEBUG_TRIGGER' => 'yes'
+    'DB_PASSWORD' => '123'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b'
+    'DB_HOST' => 'boxes-mysqldb'
+    'DB_USER' => 'user1'
+    'HTTP_COOKIE' => 'PHPSESSID=e78f3a38e540434b695f53f3d6b6ab60; _csrf=3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og%22%3B%7D; XDEBUG_SESSION=yes'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8012'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'default_server'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.27.0.4'
+    'REMOTE_PORT' => '51976'
+    'REMOTE_ADDR' => '172.27.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.24.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/js/bootstrap.min.js.map'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1720703913.3553
+    'REQUEST_TIME' => 1720703913
+    'argv' => []
+    'argc' => 0
+]
+2024-07-11 13:18:33 [172.27.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "css/bootstrap.min.css.map". in /var/www/html/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('css/bootstrap.m...', Array)
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Страница не найдена. in /var/www/html/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2024-07-11 13:18:33 [172.27.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'e78f3a38e540434b695f53f3d6b6ab60'
+    '_csrf' => '3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og\";}'
+    'XDEBUG_SESSION' => 'yes'
+]
+
+$_SERVER = [
+    'HOSTNAME' => 'e153077d5720'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/'
+    'DB_NAME' => 'boxes_db'
+    'XDEBUG_CONFIG' => 'client_host=host.docker.internal'
+    'PHP_IDE_CONFIG' => 'serverName=docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.2.13'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.13.tar.xz'
+    'XDEBUG_MODE' => 'debug'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'XDEBUG_TRIGGER' => 'yes'
+    'DB_PASSWORD' => '123'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b'
+    'DB_HOST' => 'boxes-mysqldb'
+    'DB_USER' => 'user1'
+    'HTTP_COOKIE' => 'PHPSESSID=e78f3a38e540434b695f53f3d6b6ab60; _csrf=3fdfaad1320640fb46f9419779c8b4699c5df80b4cdec7477a5c219d3a73d433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SbCZT42Q0OUuFCI_RNF2LYUl9EBEG8Og%22%3B%7D; XDEBUG_SESSION=yes'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8012'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'default_server'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.27.0.4'
+    'REMOTE_PORT' => '43428'
+    'REMOTE_ADDR' => '172.27.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.24.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/css/bootstrap.min.css.map'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1720703913.3091
+    'REQUEST_TIME' => 1720703913
+    'argv' => []
+    'argc' => 0
+]
