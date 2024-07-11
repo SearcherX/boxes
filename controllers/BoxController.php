@@ -5,6 +5,7 @@ namespace app\controllers;
 use app\models\Box;
 use app\models\BoxForm;
 use app\models\BoxSearch;
+use app\models\Status;
 use Yii;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
@@ -55,7 +56,10 @@ class BoxController extends Controller
             'model' => $formModel,
             'action' => 'update',
             'box' => $box,
-            'statuses' => ['Expected', 'At warehouse', 'Prepared', 'Shipped']
+            'statuses' => [
+                Status::PREPARED->getValue() => Status::PREPARED->getName(),
+                Status::SHIPPED->getValue() =>Status::SHIPPED->getName()
+            ]
         ]);
     }
 
